@@ -1,0 +1,1841 @@
+/*Snippets for my styles*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.clearfix:before, .clearfix:after{
+    content:"";
+    display:table;
+}
+.clearfix:after{
+    clear:both;
+}
+.clearfix{
+    zoom:1;
+}
+
+/*Fonts for project*/
+/*HelveticaNeueRegular */
+
+@font-face {
+    font-family: "HelveticaNeueRegular";
+    src: url("../fonts/HelveticaNeue-Regular/HelveticaNeue.eot");
+    src: url("../fonts/HelveticaNeue-Regular/HelveticaNeue.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/HelveticaNeue-Regular/HelveticaNeue.woff") format("woff"),
+    url("../fonts/HelveticaNeue-Regular/HelveticaNeue.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*HelveticaNeueBold */
+
+@font-face {
+    font-family: "HelveticaNeueBold";
+    src: url("../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.eot");
+    src: url("../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.woff") format("woff"),
+    url("../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*FuturaHeavy */
+
+
+@font-face {
+    font-family: 'FuturaHeavy';
+    src: url('../fonts/futuraHeavy/futura-pt-heavy.eot');
+    src: local('☺'), url('../fonts/futuraHeavy/futura-pt-heavy.woff') format('woff'), url('../fonts/futuraHeavy/futura-pt-heavy.ttf') format('truetype'), url('../fonts/futuraHeavy/futura-pt-heavy.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*FuturaDemi */
+@font-face {
+    font-family: 'FuturaDemi';
+    src: url('../fonts/futuraDemi/FuturaPTDemi.eot');
+    src: local('☺'), url('../fonts/futuraDemi/FuturaPTDemi.woff') format('woff'), url('../fonts/futuraDemi/FuturaPTDemi.ttf') format('truetype'), url('../fonts/futuraDemi/FuturaPTDemi.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*TimesItalic */
+@font-face {
+    font-family: "TimesItalic";
+    src: url("../fonts/Times Italic.ttf") format("truetype");
+    src: url('../fonts/times_italic-webfont.woff2') format('woff2'),
+    url('../fonts/times_italic-webfont.woff') format('woff');;
+    font-style: normal;
+    font-weight: normal;
+}
+/*RobotoBold */
+@font-face {
+    font-family: "RobotoBold";
+    src: url("../fonts/RobotoBold/RobotoBold.eot");
+    src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/RobotoBold/RobotoBold.woff") format("woff"),
+    url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/*RobotoRegular */
+@font-face {
+    font-family: "RobotoRegular";
+    src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+    src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+    url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/*OpenSansSemiBold */
+@font-face {
+    font-family: "OpenSansSemiBold";
+    src: url("../fonts/OpenSansSemiBold/OpenSansSemiBold.eot");
+    src: url("../fonts/OpenSansSemiBold/OpenSansSemiBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OpenSansSemiBold/OpenSansSemiBold.woff") format("woff"),
+    url("../fonts/OpenSansSemiBold/OpenSansSemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/*OpenSansBold */
+@font-face {
+    font-family: "OpenSansBold";
+    src: url("../fonts/OpenSansBold/OpenSansBold.eot");
+    src: url("../fonts/OpenSansBold/OpenSansBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OpenSansBold/OpenSansBold.woff") format("woff"),
+    url("../fonts/OpenSansBold/OpenSansBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* ==================== COMMON ================  */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+.float-right {
+    float: right;
+}
+
+.col {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row {
+    clear: both;
+}
+
+.container {
+    display: block;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.helper {
+    vertical-align: middle;
+    display: inline-block;
+    max-height: 45px;
+}
+
+.col-1-4 {
+    width: 25%;
+}
+
+.col-1-2 {
+    width: 50%;
+}
+
+.col-1-3 {
+    width: 33.3%;
+}
+
+.col-2-3 {
+    width: 66.6%;
+}
+
+.padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.padding-left {
+    padding-left: 0;
+}
+
+.padding-right {
+    padding-right: 0;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1180px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .container {
+        width: 1010px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 92%;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+/* =========CUSTOM STYLES ============*/
+a:focus, a:link, a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #f14a58;
+}
+.section {
+    padding-top: 9.5%;
+    padding-bottom: 2%;
+}
+
+.customBanner {
+    color: #000;
+    font: 30px/44px 'FuturaDemi';
+    margin-bottom: 0;
+}
+
+.customBannerDesc {
+    color: #757575;
+    font: 16px/26px 'TimesItalic';
+}
+
+.customH2 {
+    color: #000;
+    font: 60px/65px 'FuturaDemi';
+    text-align: center;
+}
+
+.customGoose {
+    font: 14px/24px 'Helvetica Neue', 'HelveticaNeueBold';
+    margin: 43px auto 10px;
+    text-align: center;
+    width: 70%;
+    font-weight: bold;
+}
+
+.customPrice {
+    font: 14px/24px 'HelveticaNeueRegular';
+    text-align: center;
+}
+
+.customButton {
+    padding: 20px 105px;
+    border: 1px solid #e5e5e5;
+    color: #000;
+    font: 26px/65px 'FuturaDemi';
+    transition: 0.5s;
+}
+
+.customButton:hover {
+    background: #f5f5f5;
+}
+
+.customMiniHead {
+    font: 18px/65px 'FuturaDemi';
+}
+
+.customItalic {
+    font: 16px/30px 'TimesItalic';
+    color: #757575;
+}
+
+.search::-webkit-input-placeholder {
+    color:#a8a8a8;font: 12px/65px 'FuturaDemi' !important;letter-spacing: 0.3px;
+}
+
+.search:-moz-placeholder {
+    color:#a8a8a8;font: 12px/65px 'FuturaDemi' !important;letter-spacing: 0.3px;
+}
+
+.search::-moz-placeholder {
+    color:#a8a8a8;font: 12px/65px 'FuturaDemi' !important;letter-spacing: 0.3px;
+}
+
+.search:-ms-input-placeholder {
+    color:#a8a8a8;font: 12px/65px 'FuturaDemi' !important;letter-spacing: 0.3px;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* =========END CUSTOMS STYLES ==================*/
+/* ==================== HEADER =============*/
+.header {
+    color: #000;
+}
+.rowTopBar {
+    clear: both;
+}
+.logo {
+    font: 30px/65px 'FuturaHeavy', sans-serif;
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: 0.8px;
+
+}
+
+.logo:hover {
+    color: #000;
+}
+
+.logoBlock {
+    margin-top: 10px;
+}
+
+.logInBlock {
+    text-align: right;
+    margin-top: 7px;
+}
+
+.singUp, .bag {
+    font: 12px/65px 'HelveticaNeueRegular', sans-serif;
+    color: inherit;
+}
+
+.bag:before {
+    content: url('../img/header/bag.png');
+    margin-right: 15px;
+}
+
+.bag {
+    margin-left: 33px;
+}
+
+.logoMobile {
+    font: 30px/65px 'FuturaHeavy', sans-serif;
+    display: none;
+}
+/* ==================== NAV =============*/
+nav{
+    position: relative;
+}
+.menu {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.menu li{
+    float: left;
+    display: inline;
+    margin-right: 64px;
+}
+
+.menu li a {
+    font: 14px/26px 'FuturaDemi', sans-serif;
+    color: inherit;
+}
+
+.menu li a.activeLink {
+    color: #f14a58;
+}
+
+.menu li a:hover {
+    color: #f14a58;
+}
+.search {
+    width: 10%;
+    position: relative;
+}
+.searchForm {
+    position: relative;
+    margin-top: 5px;
+}
+
+.searchForm:after {
+    content: '';
+    background: #e5e5e5;
+    height: 2px;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+}
+
+.search input {
+    width: 85%;
+    border: none;
+    box-shadow: none;
+    color: #a8a8a8;
+    font: 12px 'FuturaDemi';
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search button {
+    position: absolute;
+    right: 2px;
+    top: 3px;
+    background: none;
+    border: none;
+}
+
+header .openSearch {
+    clear: both;
+    width: 250px;
+    margin-bottom: 20px;
+    display: block;
+    position: absolute;
+    right: 0;
+}
+header .display {
+    display: block;
+}
+.display {
+    display: block;
+}
+.openSearch .searchButton img {
+    display: none;
+}
+.openSearch .searchButton:after {
+    content: 'X';
+    color: #757575;
+}
+.openMenu .iconMenu {
+    background-position: bottom center;
+}
+.mobileMenu {
+    display: none;
+}
+.openMenu .mobileMenu {
+    border-left: 1px solid transparent;
+}
+.openMenu .rowTopBar:after {
+    content: '';
+    border-bottom: 1px solid #e5e5e5;
+    display: block;
+    width: 100vw;
+    margin-left: -21px;
+}
+.iconMenu {
+    width: 14px;
+    height: 15px;
+    display: block;
+    margin-top: 26px;
+    background: url("../img/header/mobileMenu.png") top center;
+}
+/* ==================== END NAV =============*/
+
+/* ==================== END HEADER =============*/
+
+/* ==================== BANNER SECTION =============*/
+.banners {
+    border: 1px solid #e5e5e5;
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.bannerBlock {
+    overflow: hidden;
+    position: relative;
+}
+
+.bannerBlock:hover img {
+    transform: scale(1.05);
+}
+
+.bannerBlock img {
+    transform: scale(1);
+    transition: transform 1s;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 55px;
+    right: 16%;
+    text-align: center;
+}
+
+/* ==================== END BANNER SECTION =============*/
+
+/* ==================== SECTION NEW ARRIVALS =============*/
+.rowArrivals {
+    margin-top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+}
+.arrivalItem {
+    cursor: pointer;
+    color: #000;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 90px;
+    width: 240px;
+    text-align: center;
+    position: relative;
+}
+.arrivalButton {
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+
+/* ================= END SECTION NEW ARRIVALS  =============*/
+
+/* ================= FOOTER  =============*/
+
+.footer {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.leftFooter {
+    border-right: 1px solid #e5e5e5;
+    padding-top: 2.5%;
+    padding-bottom: 8.5%;
+}
+
+.rightFooter {
+    padding-top: 2.5%;
+    padding-left: 45px;
+}
+
+.rowRightFooter {
+    clear: both;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.rowRightFooter .customMiniHead {
+    line-height: 42px;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+.footerList li a {
+    font: 14px/40px 'HelveticaNeueRegular';
+}
+
+.footerCustom {
+    font: 14px/24px 'HelveticaNeueRegular';
+}
+
+.footerCustom a {
+    font-family: 'HelveticaNeueBold', sans-serif;
+}
+
+.phone:hover {
+    color: #000;
+}
+
+.footerQuestions,
+.footerLinks {
+    width: 45%;
+}
+
+.footerPhone,
+.footerCare{
+    width: 55%;
+}
+
+.footerQuestions .footerCustom:before {
+    content: url("../img/social/tw.png");
+    margin-right: 10px;
+}
+.customItalic {
+    width: 65%;
+    margin-top: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.rowSocial {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 40px;
+}
+.rowSocial .legalBlock {
+    display: none;
+}
+
+.tw {
+    margin-left: 22px;
+}
+
+.footerList {
+    margin-top: 15px;
+}
+
+.footerPhone {
+    padding-left: 35px;
+}
+/* ================= END FOOTER  =============*/
+/* ================= BOTTOM BAR  =============*/
+
+.bottomBar {
+    padding-top: 8px;
+}
+.bottomBarP {
+    font: 12px/65px 'HelveticaNeueBold';
+}
+
+.bottomBarList {
+    text-align: right;
+}
+.bottomBarList li {
+    display: inline;
+    margin-left: 38px;
+}
+
+.bottomBarList a {
+    font: 12px/65px 'HelveticaNeueBold';
+}
+
+.share {
+    font: 12px/65px 'HelveticaNeueRegular';
+    background: #f4f4f4;
+    padding: 5px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.share:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 100%;
+    top: 10px;
+    border-top: 3px solid transparent;
+    border-right: 4px solid #f4f4f4;
+    border-bottom: 3px solid transparent;
+}
+/* ================= END BOTTOM BAR =============*/
+
+/*Second page*/
+
+/*+++++++++++++  PAGE CATALOG  ++++++++++++++++++*/
+.filter {
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    position: relative;
+}
+
+
+.filter .selectLabel {
+    display: block;
+    cursor: pointer;
+    z-index: 10;
+    padding-left: 22px;
+    position: relative;
+}
+
+.filter .selectItem:first-child .selectLabel {
+    padding-left: 0;
+}
+
+.filter select {
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    top: 65px;
+    display: none;
+    overflow-y: auto;
+    border: none;
+    -moz-appearance: none;
+    text-indent: 15px;
+    text-overflow: '';
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    appearance: none!important;
+}
+
+.filter option {
+    font: 14px 'FuturaDemi';
+    height: 30px;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+.filter option:hover{
+    background: #f14a58;
+    color: #fff;
+}
+
+.filter .display {
+    display: block;
+    border-top: 0;
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+}
+
+.filter select:focus {
+    outline: none;
+}
+.nameFilter, .valueFilter {
+    display: block;
+}
+
+.filter .filterTablet {
+    display: none;
+}
+
+.filter.firstSelected:before,
+.filter.lastSelected:after {
+    content: '';
+    background: #f7f7f7;
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    z-index: -10;
+}
+
+.filter.lastSelected:after {
+    right: 0;
+}
+
+.filter.firstSelected:before {
+    left: 0;
+}
+
+.selectItem {
+    width: 16.66%;
+    position: relative;
+    float: left;
+    height: 65px;
+    background: #fff;
+}
+
+.selectedItem {
+    background: #f7f7f7;
+}
+
+.selectItem:after {
+    content: url('../img/catalog/arrowSelect.png');
+    position: absolute;
+    right: 17px;
+    top: 22px;
+}
+
+.selectItem:last-child:after {
+    right: 0;
+}
+
+
+.mobileSelects {
+    background: #fff;
+}
+
+.mobileSelects .selectItem {
+    width: 100%;
+}
+
+.mobileSelects select {
+    position: relative;
+    height: 40px;
+}
+
+.mobileSelects select option {
+    float: left;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.mobileSelects select option:hover {
+    color: inherit;
+}
+
+
+.products {
+    padding-top: 0;
+}
+
+.products .customItalic {
+    line-height: 24px;
+}
+
+.products .arrivalItem {
+    margin-top: 56px;
+}
+
+.viewCover {
+    opacity: 0;
+    background: rgba(94,102,108,0.3);
+    position: absolute;
+    width: 100%;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.5s;
+}
+
+.products .wrapperItem:hover .viewCover{
+    opacity: 1;
+}
+
+.quickView, .morePhotos {
+    font: 22px/65px 'FuturaDemi';
+}
+
+.quickView {
+    color: #f14a58;
+    padding-top: 38%;
+}
+
+.morePhotos {
+    color: #fff;
+}
+
+.priceWithoutDiscount,
+.discountProduct{
+    color: #757575;
+}
+
+.priceWithoutDiscount {
+    font: 14px/24px 'HelveticaNeueRegular';
+}
+
+.discountProduct {
+    font: 16px/24px 'TimesItalic';
+}
+
+
+.extraOff {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding-top: 72px;
+    z-index: 1;
+    cursor: default;
+    letter-spacing: 0.8px;
+}
+
+.extraOff .customMiniHead {
+    font: 26px/34px 'FuturaDemi';
+    width: 75%;
+    margin: 0 auto;
+}
+
+.extra {
+    color: #f14a58;
+}
+
+.offerExtra {
+    font: 16px/30px 'TimesItalic';
+    color: inherit;
+    width: 85%;
+    margin: 15px auto 0;
+    letter-spacing: 0;
+}
+
+.wrapperItem {
+    position: relative;
+}
+
+.overlayIndivid {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+}
+
+.overlayIndivid .customBanner {
+    color: #fff;
+}
+
+.hoverItalicText {
+    color: #fff;
+    font: 16px/26px 'TimesItalic';
+}
+
+.bannersCatalog .rightBannerSmall {
+    display: block;
+}
+
+.bannersCatalog .banners {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.bannersCatalog .customBanner,
+.bannersCatalog .leftBanner .customBannerDesc,
+.bannersCatalog .rightBanner .customPrice{
+    color: #fff;
+}
+
+.bannersCatalog .rightBanner .overlay,
+.bannersCatalog .rightBannerSmall .overlay{
+    position: absolute;
+    width: 100%;
+    bottom: 48px;
+    right: inherit;
+    top:inherit;
+    text-align: center;
+}
+
+.bannersCatalog .rightBannerSmall .customBanner {
+    color: #f14a58;
+}
+
+.leftBanner, .rightBanner {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.products .customGoose {
+    width: 80%;
+}
+
+.showMore {
+    margin-bottom: 11.5%;
+}
+
+
+/*Third page*/
+/*+++++++++++++++++++Item details page++++++++++++++++++++++++++*/
+.breadCrumbs {
+    border-top: 1px solid #e5e5e5;
+}
+.backToCatalog {
+    font: 16px/55px 'OpenSansBold';
+    margin-left: 16px
+}
+
+.fullItem {
+    width: 78%;
+    padding-left: 0;
+}
+
+.fullItem img {
+    width: 100%;
+}
+
+.itemProduct {
+    margin-top: 68px;
+}
+
+.tumbs {
+    width: 22%;
+    padding-right: 0;
+}
+
+.tumb {
+    position: relative;
+    margin-bottom: 21px;
+    cursor: pointer;
+}
+
+.tumb:hover .overlay {
+    content: '';
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+}
+
+.chooseOptions,
+.addedGoose{
+    display: none;
+    text-align: center;
+}
+
+.addedGoose {
+    margin-top: 3%;
+}
+
+.chooseOptions.display,
+.addedGoose.display {
+    display: block;
+}
+
+.messageAboutChoice,
+a.messageAboutChoice {
+    font: 16px/34px 'FuturaDemi';
+    text-align: center;
+    color: #f14a58;
+}
+
+.rowInfoProduct {
+    text-align: center;
+    clear: both;
+    margin-top: 52px;
+    letter-spacing: 0.8px;
+}
+
+.nameProduct {
+    font: 26px/48px 'RobotoBold';
+}
+
+.priceItem {
+    font: 18px/49px 'RobotoRegular';
+}
+
+.descProduct {
+    font: 16px/30px 'Times New Roman';
+    font-style: italic;
+    width: 57%;
+    margin: 0 auto;
+}
+
+.rowOptionsProduct {
+    text-align: center;
+    margin-top: 40px;
+}
+.optionProductTitle {
+    font: 24px/34px 'RobotoBold';
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.listOptions li {
+    cursor: pointer;
+    display: inline;
+    width: 145px;
+    margin-right: 52px;
+    padding: 20px 40px;
+    border: 1px solid #e5e5e5;
+    font: 24px/64px 'OpenSansSemiBold';
+}
+
+.listOptions li:hover {
+    background: #707070;
+}
+.listOptions li:last-child {
+    margin-right: 0;
+}
+
+.colorOptions li {
+    margin-right: 62px;
+}
+
+.activeOption {
+    background: #707070;
+}
+
+.color {
+    margin-top: 54px;
+}
+
+.addToBag {
+    margin-top: 13%;
+    margin-bottom: 12.8%;
+}
+
+.bannersCatalog .overlay {
+    right: 13%;
+}
+
+.bagTitle {
+    border-top: 1px solid #e5e5e5;
+}
+
+.bagTitle, .breadCrumbs {
+    border-bottom: 1px solid #e5e5e5;
+}
+.titleShoppingBag {
+    font: 24px/60px OpenSansBold;
+    margin-left: 30px;
+}
+/*Fourth page*/
+/* ++++++++++++++++++SHOP +++++++++++++++++++++++++++*/
+
+.shoppingBlock {
+    width: 50%;
+    float: left;
+    margin-top: 2%;
+}
+
+.shopImg {
+    width: 45%;
+    float: left;
+    padding-right: 20px;
+}
+
+.shopOptions {
+    width: 55%;
+    float: left;
+
+}
+
+.titleProduct {
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+
+.productBag {
+    font: 14px/24px 'HelveticaNeueBold';
+}
+
+.optionBag {
+    font: 12px/24px 'HelveticaNeueRegular';
+    margin-bottom: 0;
+    color: #000;
+}
+
+.removeItem {
+    font: 13px/65px 'OpenSansBold';
+    color: #f14a58;
+    cursor: pointer;
+}
+
+.priceBag {
+    font: 14px/65px 'Helvetica Neue';
+    text-align: center;
+}
+
+.infoBag {
+    font: 12px/40px 'FuturaDemi';
+    background: #f7f7f7;
+    padding-left: 18%;
+    margin-top: 5%;
+    border-top: 1px solid #e5e5e5;
+}
+
+.shoppingBag .arrivalButton {
+    margin-top: 0;
+}
+
+.emptyBag {
+    font: 13px/65px 'RobotoBold';
+    text-align: center;
+}
+
+.clearBag {
+    padding-left: 2.5%;
+    width: 25%;
+}
+
+.buyNow {
+    padding: 20px 120px;
+}
+
+.totalTitle {
+    font: 12px 'HelveticaNeueRegular';
+}
+
+.totalCost {
+    font: 18px 'FuturaDemi';
+}
+
+.rowBuy {
+    margin-top: 3%;
+}
+.rowBuy .arrivalButton {
+    width: 50%;
+    margin-bottom: 5.5%;
+}
+.totalBlock {
+    text-align: right;
+    margin-top: 19px;
+    width: 25%;
+    padding-right: 30px;
+}
+.thanks, .empty {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    text-align: center;
+    font: 30px/65px 'FuturaDemi';
+    color: #f14a58;
+}
+
+/*media-queries for all pages*/
+@media (min-width: 1025px) {
+    .arrivalItem {
+        margin-right: 73px;
+    }
+
+    .arrivalItem:nth-child(4n+4) {
+        margin-right: 0;
+    }
+
+    .extraOff {
+        width: 1180px;
+    }
+
+    .nameFilter {
+        font: 18px/60px 'FuturaDemi';
+        color: inherit;
+    }
+
+    .nameFilterSmall {
+        font: 12px/40px 'HelveticaNeueBold';
+    }
+
+    .valueFilter {
+        font: 18px 'FuturaDemi';
+        color: #f14a58;
+        margin-top: -10px;
+    }
+
+    .overlayIndivid {
+        top:69%;
+    }
+
+    .products .arrivalItem:nth-child(n+9) {
+        margin-top: 71px;
+    }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .menu li {
+        margin-right: 45px;
+    }
+
+    .arrivalItem {
+        margin-right: 15px;
+    }
+
+    .extraOff {
+        width: 1010px;
+    }
+}
+@media (max-width: 1024px) {
+    .NewArrivals .arrivalItem:last-child {
+        display: none;
+    }
+    .arrivalItem {
+        margin-right: 8%;
+        width: 28%;
+    }
+    .arrivalItem:nth-child(3n+3) {
+        margin-right: 0;
+    }
+    .customGoose {
+        width: 90%;
+    }
+
+    .customItalic {
+        display: none;
+    }
+    .leftFooter {
+        width: 66%;
+        border-right: 0;
+    }
+
+    .rightFooter {
+        width: 34%;
+        padding-left: 0;
+    }
+
+    .customMiniHead {
+        font-size: 16px;
+    }
+    .customButton {
+        font-size: 24px;
+    }
+    .footerQuestions,
+    .footerPhone{
+        width: 100%;
+    }
+    .rowSocial {
+        margin-top: 30%;
+    }
+    .legalBlock, .yearBlock {
+        width: 40%;
+    }
+    .shareBlock {
+        width: 20%;
+    }
+    .bottomBarList li {
+        margin-left: 15px;
+    }
+    .menu {
+        width: 87%;
+        padding-right: 0;
+    }
+
+    .search {
+        width: 13%;
+    }
+    .menu li {
+        margin-right: 20px;
+    }
+
+    .menu li:last-child {
+        margin-right: 0;
+    }
+    .rightBannerSmall {
+        display: block;
+        width: 33.3%;
+        text-align: center;
+    }
+    .leftBanner {
+        width: 50%;
+    }
+    .banners:after {
+        background: transparent;
+    }
+    .rightBannerSmall .overlay {
+        position: relative;
+        top:0;
+        right: 0;
+    }
+    .rightBannerSmall .customBanner {
+        color: #f14a58;
+        margin-top: 20px;
+    }
+    .customBanner {
+        font-size: 26px;
+    }
+    .banners {
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .extraOff {
+        width: 91vw;
+    }
+    .bannersCatalog .rightBannerSmall {
+        display: none;
+    }
+
+    .bannersCatalog .rightBanner {
+        display: block;
+        width: 33.3%;
+    }
+
+    .bannersCatalog.banners {
+        border-bottom: none;
+    }
+
+    .desktopSelects {
+        display: none;
+    }
+
+    .mobileSelects {
+        display: block;
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        left: 0;
+    }
+
+    .filter .filterTablet {
+        display: block;
+        cursor: pointer;
+        font: 16px/65px 'FuturaDemi';
+        margin-bottom: 0;
+        height: 65px;
+        overflow-y: hidden;
+    }
+
+    .mobileSelects select {
+        display: block;
+    }
+    .filter select {
+        top: 0;
+        overflow-y: scroll;
+    }
+
+    .filter option {
+        font: 36px/65px 'FuturaDemi';
+        color: #a8a8a8;
+        padding-top: 0;
+    }
+
+    .filter option:checked {
+        color: #000;
+    }
+
+    .nameFilter {
+        font: 12px 'HelveticaNeueBold';
+        color: #000;
+    }
+
+    .filter option:hover {
+        background: transparent;
+    }
+
+    .mobileSelects .selectItem {
+        margin-top: 15px;
+    }
+
+    .breadCrumbs {
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .fullItem,.tumbs  {
+        width: 100%;
+    }
+
+
+    .tumbs {
+        margin-top: 30px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    .tumb {
+        width: 30%;
+        margin-right: 1%;
+    }
+
+    .tumb:last-child {
+        text-align: right;
+        margin-right: 0;
+    }
+
+    .tumb:nth-child(2) {
+        text-align: center;
+    }
+
+    .leftBanner {
+        border-right: 1px solid #e5e5e5;
+    }
+
+    /*.bannersStart .bannerBlock img{*/
+    /*    width: inherit;*/
+    /*}*/
+
+    .bannersStart .leftBanner img {
+        width: 80%;
+    }
+
+    .rightBannerSmall img {
+        margin-top: 15%;
+    }
+    .menu li a{
+        font: 12px/22px 'FuturaDemi', sans-serif;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .bannerBlock {
+        height: 250px;
+    }
+
+
+    .leftBanner .overlay {
+        top:10%;
+    }
+
+    .listOptions li {
+        display: block;
+        width: 45%;
+        padding: 0;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .listOptions li:nth-child(2n+1) {
+        float: left;
+    }
+    .listOptions li:nth-child(2n) {
+        float: right;
+    }
+
+    .buyNow {
+        padding: 17px 25%;
+    }
+
+    .infoBag {
+        padding-left: 3%;
+        padding-right: 3%;
+        line-height: 24px;
+    }
+
+    .rightBannerSmall {
+        border-left: 1px solid #e5e5e5;
+    }
+    .menu {
+        width: 87%;
+        padding-right: 0;
+
+    }
+    .search {
+        width: 13%;
+    }
+    .menu li a{
+        font: 12px/22px 'FuturaDemi', sans-serif;
+    }
+    .rightBanner {
+        display: none;
+    }
+    .leftBanner {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .yearBlock, .shareBlock,
+    .legalBlock{
+        width: 100%;
+        text-align: center;
+    }
+
+    .bottomBarList {
+        text-align: center;
+    }
+
+    .bottomBarP, .year, .share, .bottomBar .customMiniHead, .bottomBarList a {
+        line-height: 22px;
+    }
+
+    .legalBlock {
+        margin-top: 10px;
+    }
+
+
+    .logoMobile {
+        display: block;
+        font-size: 24px;
+        padding-left: 15px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logoBlock{
+        width: 25%;
+        margin-top: 0;
+    }
+
+    .logInBlock {
+        text-align: left;
+        width: 65%;
+        margin-top: 0;
+    }
+    .hideMobile {
+        display: none;
+    }
+    .bag {
+        margin-left: 78%;
+    }
+    .mobileMenu {
+        display: block;
+        width: 10%;
+        text-align: left;
+        padding-right: 0;
+        padding-left: 4vw;
+        border-left: 1px solid #e5e5e5;
+        height: 66px;
+    }
+    .mobileMenu a {
+        line-height: 65px;
+    }
+    .menu li {
+        float: none;
+        display: block;
+
+    }
+
+    .menu li a {
+        font: 28px/60px 'FuturaDemi';
+    }
+
+    .menu {
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    .search button {
+        position: absolute;
+    }
+
+    .search {
+        width: 50%;
+        padding-left: 15px;
+        margin-bottom: 30px;
+    }
+
+    .searchForm {
+        display: block;
+    }
+
+    .bannerBlock {
+        height: auto;
+    }
+
+    .quickView, .morePhotos {
+        line-height: 26px;
+    }
+
+    .rowRightFooter:after, .leftFooter:after {
+        margin-left: -20px;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .rowBuy .customButton {
+        padding: 0;
+        display: block;
+    }
+    .bag {
+        margin-left: 71%;
+    }
+}
+
+@media (max-width: 480px) {
+    .arrivalItem:nth-child(3n+3) {
+        margin-right: 8%;
+    }
+    .arrivalItem:nth-child(2n+2) {
+        margin-right: 0;
+    }
+
+    .arrivalItem {
+        width: 46%;
+    }
+    .yearBlock {
+        width: 65%;
+    }
+
+    .shareBlock {
+        width: 35%;
+        text-align: right;
+        padding-right: 0;
+    }
+
+    .legalBlock {
+        display: none;
+    }
+
+    .rowSocial .legalBlock {
+        display: block;
+    }
+
+    .rightBannerSmall {
+        display: none;
+    }
+    .rightBanner {
+    display: none;
+    }
+    .leftBanner {
+        width: 100%;
+        height: auto;
+        border-right: 0;
+    }
+
+    .customBanner {
+        font-size: 24px;
+    }
+
+    .customH2 {
+        font-size: 30px;
+    }
+
+    .customGoose {
+        line-height: 20px;
+    }
+
+    .customGoose, .customPrice,
+    .footerList li a,
+    .footerCustom{
+        font-size: 12px;
+    }
+
+    .customButton {
+        font-size: 20px;
+        padding: 18px 70px;
+    }
+    .customMiniHead {
+        font-size: 14px;
+    }
+
+    .arrivalButton {
+        margin-bottom: 20%;
+    }
+    .footer .customMiniHead {
+        font-size: 16px;
+    }
+
+    .bottomBarP,
+    .bottomBarList a,
+    .share{
+        font-size: 10px;
+    }
+
+    .NewArrivals .arrivalItem:nth-child(3){
+        display: none;
+    }
+
+
+    .leftFooter, .rightFooter {
+        width: 100%;
+        position: relative;
+    }
+
+    .footerQuestions, .footerLinks,
+    .footerPhone, .footerCare {
+        width: 50%;
+    }
+
+    .rowSocial {
+        margin-top: 11%;
+        padding-right: 0;
+        padding-bottom: 8px;
+    }
+
+    .bottomBarList, .yearBlock {
+        text-align: left;
+    }
+
+    .bottomBarList li:first-child {
+        margin-left: 0;
+    }
+
+    .rowRightFooter,
+    .rowSocial{
+        padding-left: 0;
+        padding-right: 0;
+        position: relative;
+    }
+
+    .legalBlock {
+        width: 80%;
+        margin-top: 0;
+    }
+
+    .IconsFooter {
+        width: 20%;
+        text-align: right;
+        float: left;
+        margin-top: 4px;
+    }
+
+    .footerPhone,.footerCare {
+        padding-left: 15px;
+    }
+    .leftFooter {
+        padding-bottom: 0;
+    }
+
+    .rowRightFooter:after, .leftFooter:after {
+        content: '';
+        background: #e5e5e5;
+        height: 1px;
+        width: 100vw;
+        margin-left: -40px;
+        position: relative;
+        left: 0;
+        bottom: -20px;
+
+    }
+
+    .bottomBar {
+        padding-top: 5%;
+        padding-bottom: 3%;
+    }
+
+    .extraOff .customMiniHead {
+        font: 20px/30px 'FuturaDemi';
+    }
+
+    .bannersCatalog .rightBanner {
+        display: none;
+    }
+
+    .shoppingBlock {
+        width: 100%;
+    }
+
+    .productBag {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .optionBag {
+        font: 10px/20px 'HelveticaNeueRegular';
+    }
+
+    .removeItem {
+        font-size: 11px;
+    }
+
+    .priceBag {
+        font-size: 12px;
+    }
+
+    .shopImg, .shopOptions {
+        width: 50%;
+    }
+
+    .infoBag {
+        font-size: 10px;
+    }
+
+    .emptyBag, .totalTitle {
+        font-size: 10px;
+    }
+    .totalCost {
+        font-size: 14px;
+    }
+
+    .totalBlock, .clearBag {
+        padding-right: 0;
+    }
+    .bag {
+        margin-left: 71%;
+    }
+
+}
+@media (max-width: 550px) {
+    .bag {
+        margin-left: 60%;
+    }
+}

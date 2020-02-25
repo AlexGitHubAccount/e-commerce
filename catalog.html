@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script defer src="js/main.js"></script>
+    <title>catalog</title>
+</head>
+<body>
+<header class="header">
+    <div class="container padding clearfix">
+        <div class="rowTopBar clearfix">
+            <div class="col col-1-2 logoBlock padding-left">
+                <a href="index.html" class="logo">Template</a>
+                <a href="index.html" class="logoMobile">TL</a>
+            </div>
+            <div class="col col-1-2 logInBlock padding-right">
+                <a href="#" class="singUp hideMobile">E-mail sing up</a>
+                <a href="shopping-bag.html" class="bag">Bag <span class="commonPrice"></span></a>
+            </div>
+            <div class="col mobileMenu">
+                <a href="#" class="iconMenu"></a>
+            </div>
+        </div>
+        <nav class="nav hideMobile clearfix">
+            <ul class="col menu padding-left">
+                <li><a href="catalog.html" class="activeLink">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Handbags</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Sale</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Clearance</a></li>
+                <li><a href="#">Store Locator</a></li>
+            </ul>
+            <div class="col padding search">
+                <form action="#" class="searchForm">
+                    <label>
+                        <input type="search" name="search" placeholder="Style Name">
+                    </label>
+                    <button type="button" class="searchButton"><img src="img/header/search.png" alt="search"></button>
+                </form>
+
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section class="filter">
+    <div class="container padding">
+        <form action="" class="form formFilter">
+            <label for="Fashion" class="filterTablet">
+            </label>
+            <div class="desktopSelects clearfix">
+                <div class="selectItem" data-select="1">
+                    <div class="selectLabel">
+                        <span class="nameFilter">Fashion</span>
+                        <span class="valueFilter"></span>
+                    </div>
+                    <label for="fashion"></label><select name="fashion" id="fashion" size="10">
+                        <option value="notSelected">Not Selected</option>
+                        <option class="act" value="Casual">Casual Style</option>
+                        <option value="NewLook">New Look</option>
+                        <option value="Sport">Sport</option>
+                        <option value="Vintage">Vintage</option>
+                        <option value="Classic" >Classic</option>
+                    </select>
+                </div>
+                <div class="selectItem"  data-select="2">
+                    <div class="selectLabel">
+                        <span class="nameFilter">Product type</span>
+                        <span class="valueFilter"></span>
+                    </div>
+                    <label for="product"></label><select name="fashion" id="product" size="10">
+                        <option value="notSelected">Not Selected</option>
+                        <option value="Coats">Coats & Jackets</option>
+                        <option value="Dresses">Dresses</option>
+                        <option value="Tops">Jersey Tops</option>
+                    </select>
+                </div>
+                <div class="selectItem"  data-select="3">
+                    <div class="selectLabel">
+                        <span class="nameFilter">Color</span>
+                        <span class="valueFilter"></span>
+                    </div>
+                    <label for="color"></label><select name="fashion" id="color" size="10">
+                        <option value="notSelected">Not Selected</option>
+                        <option value="Black">Black</option>
+                        <option value="Red">Red</option>
+                        <option value="Pink">Pink</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Grey">Grey</option>
+                        <option value="White">White</option>
+                    </select>
+                </div>
+                <div class="selectItem"  data-select="4">
+                    <div class="selectLabel">
+                        <span class="nameFilter">Brand</span>
+                        <span class="valueFilter"></span>
+                    </div>
+                    <label for="brand"></label><select name="fashion" id="brand" size="10">
+                        <option value="notSelected">Not Selected</option>
+                        <option value="Antipodium">Antipodium</option>
+                        <option value="Adidas">Adidas</option>
+                        <option value="Balance">New Balance</option>
+                        <option value="River">River Island</option>
+                    </select>
+                </div>
+                <div class="selectItem"  data-select="5">
+                    <div class="selectLabel">
+                        <span class="nameFilter">Size</span>
+                        <span class="valueFilter"></span>
+                    </div>
+                    <label for="size"></label><select name="fashion" id="size" size="10">
+                        <option value="notSelected">Not Selected</option>
+                        <option value="2">UK 2</option>
+                        <option value="18">UK 18</option>
+                        <option value="18L">UK 18L</option>
+                        <option value="20">UK 20</option>
+                        <option value="20L">UK 20L</option>
+                        <option value="20S">UK 20S</option>
+                        <option value="22S">UK 22S</option>
+                    </select>
+                </div>
+                <div class="selectItem"  data-select="6">
+                    <div class="selectLabel">
+                        <span class="nameFilter">Price range</span>
+                        <span class="valueFilter"></span>
+                    </div>
+                    <label for="price"></label><select name="fashion" id="price" size="10">
+                        <option value="notSelected">Not Selected</option>
+                        <option value="99">To £99</option>
+                        <option value="100-299">£100-£299</option>
+                        <option value="300">From £300</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="section arrivals products">
+    <div class="container padding">
+        <div class="rowArrivals clearfix">
+            <div class="col arrivalItem" data-product="1">
+                <div class="wrapperItem">
+                    <img src="img/catalog/product1.jpg" alt="product">
+                    <div class="viewCover">
+                        <p class="quickView">Quick view</p>
+                        <p class="morePhotos">More photos</p>
+                    </div>
+                </div>
+
+                <p class="customGoose">Only Skinny Jeans</p>
+                <p class="customPrice">£65.50</p>
+                <div class="extraOff">
+                    <p class="customMiniHead">Last weekend <span class="extra">extra 50% </span>off on all reduced boots and shoulder bags</p>
+                    <p class="offerExtra">
+                        This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at <span class="offerDate">11:59 GMT on March 1st 2015</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col arrivalItem" data-product="2">
+                <div class="wrapperItem">
+                    <img src="img/catalog/product2.jpg" alt="product">
+                    <div class="viewCover">
+                        <p class="quickView">Quick view</p>
+                        <p class="morePhotos">More photos</p>
+                    </div>
+                </div>
+                <p class="customGoose">Neck Knitted Jumper</p>
+                <p class="customPrice">£76.25</p>
+            </div>
+            <div class="col arrivalItem" data-product="3">
+                <div class="wrapperItem">
+                    <img src="img/catalog/product3.jpg" alt="product">
+                    <div class="viewCover">
+                        <p class="quickView">Quick view</p>
+                        <p class="morePhotos">More photos</p>
+                    </div>
+                </div>
+                <p class="customGoose">Turtle Neck Jumper in Rib</p>
+                <p class="customPrice">£130.25 <span class="customItalic">New</span></p>
+            </div>
+            <div class="col arrivalItem" data-product="4">
+                <div class="wrapperItem">
+                    <img src="img/catalog/product4.jpg" alt="product">
+                    <div class="viewCover">
+                        <p class="quickView">Quick view</p>
+                        <p class="morePhotos">More photos</p>
+                    </div>
+                </div>
+                <p class="customGoose">With Patchwork Crochet</p>
+                <p class="customPrice">£80.60</p>
+            </div>
+
+            <div class="col arrivalItem" data-product="5">
+                <div class="wrapperItem">
+                    <img src="img/catalog/product5.jpg" alt="product">
+                    <div class="viewCover">
+                        <p class="quickView">Quick view</p>
+                        <p class="morePhotos">More photos</p>
+                    </div>
+                    <div class="overlayIndivid">
+                        <p class="customBanner">Levi's</p>
+                        <p class="hoverItalicText">Buyer's choice</p>
+                    </div>
+                </div>
+
+                <p class="customGoose">Levi’s Jeans for women <span class="customItalic">More colors</span></p>
+            </div>
+            <div class="col arrivalItem" data-product="6">
+                <div class="wrapperItem">
+                    <img src="img/catalog/product6.jpg" alt="product">
+                    <div class="viewCover">
+                        <p class="quickView">Quick view</p>
+                        <p class="morePhotos">More photos</p>
+                    </div>
+                </div>
+                <p class="customGoose">Boyfriend T-Shirt with Bohemian Print</p>
+                <span class="priceWithoutDiscount">£120.00 </span><span class="discountProduct">-25% </span>
+                <span class="customPrice">£90.00</span>
+            </div>
+            <div class="col arrivalItem" data-product="7">
+                <div class="wrapperItem">
+                    <img src="img/catalog/product7.jpg" alt="product">
+                    <div class="viewCover">
+                        <p class="quickView">Quick view</p>
+                        <p class="morePhotos">More photos</p>
+                    </div>
+                </div>
+                <p class="customGoose">Colour Block</p>
+                <p class="customPrice">£550.50</p>
+            </div>
+            <div class="col arrivalItem" data-product="8">
+                <div class="wrapperItem">
+                    <img src="img/catalog/product8.jpg" alt="product">
+                    <div class="viewCover">
+                        <p class="quickView">Quick view</p>
+                        <p class="morePhotos">More photos</p>
+                    </div>
+                </div>
+                <p class="customGoose">With Patchwork Crochet</p>
+                <p class="customPrice">£80.60</p>
+            </div>
+            <div class="col arrivalItem" data-product="9">
+                <div class="wrapperItem">
+                    <img src="img/catalog/product9.jpg" alt="product">
+                    <div class="viewCover">
+                        <p class="quickView">Quick view</p>
+                        <p class="morePhotos">More photos</p>
+                    </div>
+                </div>
+                <p class="customGoose">Oversized Cardigan</p>
+                <p class="customPrice">£90.00</p>
+            </div>
+            <div class="col arrivalItem" data-product="10">
+                <div class="wrapperItem">
+                    <img src="img/catalog/product10.jpg" alt="product">
+                    <div class="viewCover">
+                        <p class="quickView">Quick view</p>
+                        <p class="morePhotos">More photos</p>
+                    </div>
+                </div>
+                <p class="customGoose">Paul & Joe Sister Jumper  with Neon Trims</p>
+                <p class="customPrice">£19.75 <span class="customItalic">New</span></p>
+            </div>
+            <div class="col arrivalItem" data-product="11">
+                <div class="wrapperItem">
+                    <img src="img/catalog/product11.jpg" alt="product">
+                    <div class="viewCover">
+                        <p class="quickView">Quick view</p>
+                        <p class="morePhotos">More photos</p>
+                    </div>
+                </div>
+                <p class="customGoose">Only Busted Knee Jean</p>
+                <p class="customPrice">£140.50</p>
+            </div>
+            <div class="col arrivalItem" data-product="12">
+                <div class="wrapperItem">
+                    <img src="img/catalog/product12.jpg" alt="product">
+                    <div class="viewCover">
+                        <p class="quickView">Quick view</p>
+                        <p class="morePhotos">More photos</p>
+                    </div>
+                </div>
+                <p class="customGoose">Boyfriend T-Shirt with Bohemian Print</p>
+                <p class="customPrice">£85.75</p>
+            </div>
+        </div>
+        <div class="arrivalButton showMore">
+            <a href="" class="customButton">Show more</a>
+        </div>
+    </div>
+</section>
+
+<section class="banners clearfix bannersCatalog">
+    <a href="" class="">
+        <div class="col col-1-2 leftBanner padding bannerBlock">
+            <img src="img/banners/banner2.jpg" alt="ForMen">
+            <div class="overlay">
+                <p class="customBanner">Adidas Blue</p>
+                <p class="customBannerDesc">For men</p>
+            </div>
+        </div>
+    </a>
+    <a href="#" class="">
+        <div class="col col-1-4 rightBanner padding bannerBlock">
+            <img src="img/banners/banner3.jpg" alt="RepairPatches">
+            <div class="overlay">
+                <p class="customBanner">Repair Patches</p>
+                <p class="customPrice">£ 150.50</p>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="col col-1-4 rightBannerSmall padding bannerBlock">
+            <img src="img/banners/banner4.jpg" alt="Sale">
+            <div class="overlay">
+                <p class="customBanner">Sale</p>
+                <p class="customBannerDesc">-70%</p>
+            </div>
+        </div>
+    </a>
+</section>
+
+<footer class="footer">
+    <div class="container clearfix padding">
+        <div class="col col-1-2 leftFooter clearfix padding">
+            <div class="col footerLinks padding">
+                <p class="customMiniHead">
+                    Quick Links
+                </p>
+                <ul class="footerList">
+                    <li><a href="#">Store locator</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                    <li><a href="#">Size guide</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="col footerCare padding">
+                <p class="customMiniHead">
+                    Customer Care
+                </p>
+                <ul class="footerList">
+                    <li><a href="#">Customer service</a></li>
+                    <li><a href="#">Track my order</a></li>
+                    <li><a href="#">Return policy</a></li>
+                    <li><a href="#">Shipping & delivery</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col col-1-2 rightFooter clearfix padding">
+            <div class="rowRightFooter clearfix">
+                <div class="col footerQuestions padding">
+                    <p class="customMiniHead">
+                        Questions
+                    </p>
+                    <p class="footerCustom">Tweet us <a href="">@template</a></p>
+                </div>
+                <div class=" col  footerPhone padding">
+                    <p class="customMiniHead">
+                        Order by phone
+                    </p>
+                    <a href="tel:88004094712" class="footerCustom phone">8-800-409-47-12</a>
+                </div>
+            </div>
+            <p class="customItalic">We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.</p>
+            <div class="rowSocial clearfix">
+                <div class="col col-1-3 padding legalBlock">
+                    <ul class="bottomBarList clearfix">
+                        <li><a href="#">Legal notice</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Site map</a></li>
+                    </ul>
+                </div>
+                <div class="IconsFooter">
+                    <a href="" class="fb"><img src="img/social/fb.png" alt="fb"></a>
+                    <a href="" class="tw"><img src="img/social/tw_color.png" alt="twitter"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="bottomBar">
+    <div class="container padding clearfix">
+        <div class="col col-1-3 padding yearBlock">
+            <p class="bottomBarP">
+                © 2010–<span class="year">2015</span>,<a href="">The Template Group inc.</a>
+            </p>
+        </div>
+        <div class="col col-1-3  text-center shareBlock">
+            <a href="#" class="customMiniHead">Share<span class="share">1 436</span></a>
+        </div>
+        <div class="col col-1-3 padding legalBlock">
+            <ul class="bottomBarList clearfix">
+                <li><a href="#">Legal notice</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Site map</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
