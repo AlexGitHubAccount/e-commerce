@@ -44,55 +44,14 @@ table {
     zoom:1;
 }
 
-/*Fonts for project*/
-/*HelveticaNeueRegular */
+/*Fonts for the project*/
 
+/*Times New Roman PS - Italic MT */
 @font-face {
-    font-family: "HelveticaNeueRegular";
-    src: url("../fonts/HelveticaNeue-Regular/HelveticaNeue.eot");
-    src: url("../fonts/HelveticaNeue-Regular/HelveticaNeue.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/HelveticaNeue-Regular/HelveticaNeue.woff") format("woff"),
-    url("../fonts/HelveticaNeue-Regular/HelveticaNeue.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-/*HelveticaNeueBold */
-
-@font-face {
-    font-family: "HelveticaNeueBold";
-    src: url("../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.eot");
-    src: url("../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.woff") format("woff"),
-    url("../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.otf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-/*FuturaHeavy */
-
-
-@font-face {
-    font-family: 'FuturaHeavy';
-    src: url('../fonts/futuraHeavy/futura-pt-heavy.eot');
-    src: local('☺'), url('../fonts/futuraHeavy/futura-pt-heavy.woff') format('woff'), url('../fonts/futuraHeavy/futura-pt-heavy.ttf') format('truetype'), url('../fonts/futuraHeavy/futura-pt-heavy.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-/*FuturaDemi */
-@font-face {
-    font-family: 'FuturaDemi';
-    src: url('../fonts/futuraDemi/FuturaPTDemi.eot');
-    src: local('☺'), url('../fonts/futuraDemi/FuturaPTDemi.woff') format('woff'), url('../fonts/futuraDemi/FuturaPTDemi.ttf') format('truetype'), url('../fonts/futuraDemi/FuturaPTDemi.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-/*TimesItalic */
-@font-face {
-    font-family: "TimesItalic";
-    src: url("../fonts/Times Italic.ttf") format("truetype");
-    src: url('../fonts/times_italic-webfont.woff2') format('woff2'),
-    url('../fonts/times_italic-webfont.woff') format('woff');;
+    font-family: "Times New Roman PS - Italic MT";
+    src: url("../fonts/Times New Roman PS - Italic MT/Times New Roman PS - Italic MT.ttf") format("truetype");
+    src: url('../fonts/Times New Roman PS - Italic MT/Times New Roman PS - Italic MT.woff2') format('woff2'),
+    url('../fonts/Times New Roman PS - Italic MT/Times New Roman PS - Italic MT.woff') format('woff');
     font-style: normal;
     font-weight: normal;
 }
@@ -253,23 +212,23 @@ a:hover {
 
 .customBanner {
     color: #000;
-    font: 30px/44px 'FuturaDemi';
+    font: 28px/34px 'OpenSansBold';
     margin-bottom: 0;
 }
 
 .customBannerDesc {
     color: #757575;
-    font: 16px/26px 'TimesItalic';
+    font: 16px/26px 'Times New Roman PS - Italic MT';
 }
 
 .customH2 {
     color: #000;
-    font: 60px/65px 'FuturaDemi';
+    font: 50px/65px 'OpenSansBold';
     text-align: center;
 }
 
 .customGoose {
-    font: 14px/24px 'Helvetica Neue', 'HelveticaNeueBold';
+    font: 14px/24px 'RobotoBold';
     margin: 43px auto 10px;
     text-align: center;
     width: 70%;
@@ -277,7 +236,7 @@ a:hover {
 }
 
 .customPrice {
-    font: 14px/24px 'HelveticaNeueRegular';
+    font: 14px/24px 'RobotoRegular';
     text-align: center;
 }
 
@@ -285,7 +244,7 @@ a:hover {
     padding: 20px 105px;
     border: 1px solid #e5e5e5;
     color: #000;
-    font: 26px/65px 'FuturaDemi';
+    font: 26px/65px 'OpenSansBold';
     transition: 0.5s;
 }
 
@@ -294,28 +253,28 @@ a:hover {
 }
 
 .customMiniHead {
-    font: 18px/65px 'FuturaDemi';
+    font: 18px/65px 'OpenSansBold';
 }
 
 .customItalic {
-    font: 16px/30px 'TimesItalic';
+    font: 16px/30px 'Times New Roman PS - Italic MT';
     color: #757575;
 }
 
 .search::-webkit-input-placeholder {
-    color:#a8a8a8;font: 12px/65px 'FuturaDemi' !important;letter-spacing: 0.3px;
+    color:#a8a8a8;font: 12px/65px 'OpenSansBold' !important;letter-spacing: 0.3px;
 }
 
 .search:-moz-placeholder {
-    color:#a8a8a8;font: 12px/65px 'FuturaDemi' !important;letter-spacing: 0.3px;
+    color:#a8a8a8;font: 12px/65px 'OpenSansBold' !important;letter-spacing: 0.3px;
 }
 
 .search::-moz-placeholder {
-    color:#a8a8a8;font: 12px/65px 'FuturaDemi' !important;letter-spacing: 0.3px;
+    color:#a8a8a8;font: 12px/65px 'OpenSansBold' !important;letter-spacing: 0.3px;
 }
 
 .search:-ms-input-placeholder {
-    color:#a8a8a8;font: 12px/65px 'FuturaDemi' !important;letter-spacing: 0.3px;
+    color:#a8a8a8;font: 12px/65px 'OpenSansBold' !important;letter-spacing: 0.3px;
 }
 
 button:focus {
@@ -331,7 +290,7 @@ button:focus {
     clear: both;
 }
 .logo {
-    font: 30px/65px 'FuturaHeavy', sans-serif;
+    font: 30px/65px 'OpenSansBold', sans-serif;
     color: inherit;
     text-decoration: none;
     letter-spacing: 0.8px;
@@ -352,7 +311,7 @@ button:focus {
 }
 
 .singUp, .bag {
-    font: 12px/65px 'HelveticaNeueRegular', sans-serif;
+    font: 12px/65px 'RobotoRegular', sans-serif;
     color: inherit;
 }
 
@@ -366,7 +325,7 @@ button:focus {
 }
 
 .logoMobile {
-    font: 30px/65px 'FuturaHeavy', sans-serif;
+    font: 30px/65px 'OpenSansBold', sans-serif;
     display: none;
 }
 /* ==================== NAV =============*/
@@ -385,7 +344,7 @@ nav{
 }
 
 .menu li a {
-    font: 14px/26px 'FuturaDemi', sans-serif;
+    font: 13px/24px 'OpenSansBold', sans-serif;
     color: inherit;
 }
 
@@ -420,7 +379,7 @@ nav{
     border: none;
     box-shadow: none;
     color: #a8a8a8;
-    font: 12px 'FuturaDemi';
+    font: 12px 'OpenSansBold';
 }
 
 .search input:focus {
@@ -515,7 +474,27 @@ header .display {
 }
 
 /* ==================== END BANNER SECTION =============*/
-
+/* ==================== Best offer =============*/
+.title-best-offer{
+    margin-top: 98px;
+    text-align: center;
+    color: #000000;
+    font-family: "Open Sans", sans-serif;
+    /*исправить шрифты*/
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 1.5px;
+}
+.description-best-offer{
+    text-align: center;
+    color: #000000;
+    font-family: "Times New Roman PS - Italic MT", serif;
+    /*исправить шрифты*/
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
 /* ==================== SECTION NEW ARRIVALS =============*/
 .rowArrivals {
     margin-top: 0;
@@ -571,15 +550,15 @@ header .display {
     margin-top: 15px;
 }
 .footerList li a {
-    font: 14px/40px 'HelveticaNeueRegular';
+    font: 14px/40px 'RobotoRegular';
 }
 
 .footerCustom {
-    font: 14px/24px 'HelveticaNeueRegular';
+    font: 14px/24px 'RobotoRegular';
 }
 
 .footerCustom a {
-    font-family: 'HelveticaNeueBold', sans-serif;
+    font-family: 'RobotoBold', sans-serif;
 }
 
 .phone:hover {
@@ -634,7 +613,7 @@ header .display {
     padding-top: 8px;
 }
 .bottomBarP {
-    font: 12px/65px 'HelveticaNeueBold';
+    font: 12px/65px 'RobotoBold';
 }
 
 .bottomBarList {
@@ -646,11 +625,11 @@ header .display {
 }
 
 .bottomBarList a {
-    font: 12px/65px 'HelveticaNeueBold';
+    font: 12px/65px 'RobotoBold';
 }
 
 .share {
-    font: 12px/65px 'HelveticaNeueRegular';
+    font: 12px/65px 'RobotoRegular';
     background: #f4f4f4;
     padding: 5px;
     margin-left: 10px;
@@ -709,7 +688,7 @@ header .display {
 }
 
 .filter option {
-    font: 14px 'FuturaDemi';
+    font: 12px 'OpenSansBold';
     height: 30px;
     cursor: pointer;
     padding-top: 5px;
@@ -835,7 +814,7 @@ header .display {
 }
 
 .quickView, .morePhotos {
-    font: 22px/65px 'FuturaDemi';
+    font: 22px/65px 'OpenSansBold';
 }
 
 .quickView {
@@ -853,11 +832,11 @@ header .display {
 }
 
 .priceWithoutDiscount {
-    font: 14px/24px 'HelveticaNeueRegular';
+    font: 14px/24px 'RobotoRegular';
 }
 
 .discountProduct {
-    font: 16px/24px 'TimesItalic';
+    font: 16px/24px 'Times New Roman PS - Italic MT';
 }
 
 
@@ -872,7 +851,7 @@ header .display {
 }
 
 .extraOff .customMiniHead {
-    font: 26px/34px 'FuturaDemi';
+    font: 24px/34px 'OpenSansBold';
     width: 75%;
     margin: 0 auto;
 }
@@ -882,7 +861,7 @@ header .display {
 }
 
 .offerExtra {
-    font: 16px/30px 'TimesItalic';
+    font: 16px/30px 'Times New Roman PS - Italic MT';
     color: inherit;
     width: 85%;
     margin: 15px auto 0;
@@ -905,7 +884,7 @@ header .display {
 
 .hoverItalicText {
     color: #fff;
-    font: 16px/26px 'TimesItalic';
+    font: 16px/26px 'Times New Roman PS - Italic MT';
 }
 
 .bannersCatalog .rightBannerSmall {
@@ -1011,7 +990,7 @@ header .display {
 
 .messageAboutChoice,
 a.messageAboutChoice {
-    font: 16px/34px 'FuturaDemi';
+    font: 16px/34px 'OpenSansBold';
     text-align: center;
     color: #f14a58;
 }
@@ -1093,13 +1072,13 @@ a.messageAboutChoice {
 .bagTitle, .breadCrumbs {
     border-bottom: 1px solid #e5e5e5;
 }
-.titleShoppingBag {
-    font: 24px/60px OpenSansBold;
-    margin-left: 30px;
-}
+
 /*Fourth page*/
 /* ++++++++++++++++++SHOP +++++++++++++++++++++++++++*/
-
+.titleShoppingBag {
+    font: 26px/60px OpenSansBold;
+    margin-left: 30px;
+}
 .shoppingBlock {
     width: 50%;
     float: left;
@@ -1124,11 +1103,11 @@ a.messageAboutChoice {
 }
 
 .productBag {
-    font: 14px/24px 'HelveticaNeueBold';
+    font: 14px/24px 'RobotoBold';
 }
 
 .optionBag {
-    font: 12px/24px 'HelveticaNeueRegular';
+    font: 12px/24px 'RobotoRegular';
     margin-bottom: 0;
     color: #000;
 }
@@ -1145,7 +1124,7 @@ a.messageAboutChoice {
 }
 
 .infoBag {
-    font: 12px/40px 'FuturaDemi';
+    font: 12px/40px 'OpenSansBold';
     background: #f7f7f7;
     padding-left: 18%;
     margin-top: 5%;
@@ -1171,11 +1150,11 @@ a.messageAboutChoice {
 }
 
 .totalTitle {
-    font: 12px 'HelveticaNeueRegular';
+    font: 22px 'RobotoBold';
 }
 
 .totalCost {
-    font: 18px 'FuturaDemi';
+    font: 24px 'RobotoBold';
 }
 
 .rowBuy {
@@ -1195,7 +1174,7 @@ a.messageAboutChoice {
     padding-top: 10%;
     padding-bottom: 10%;
     text-align: center;
-    font: 30px/65px 'FuturaDemi';
+    font: 30px/65px 'OpenSansBold';
     color: #f14a58;
 }
 
@@ -1214,16 +1193,16 @@ a.messageAboutChoice {
     }
 
     .nameFilter {
-        font: 18px/60px 'FuturaDemi';
+        font: 16px/60px 'OpenSansBold';
         color: inherit;
     }
 
     .nameFilterSmall {
-        font: 12px/40px 'HelveticaNeueBold';
+        font: 12px/40px 'RobotoBold';
     }
 
     .valueFilter {
-        font: 18px 'FuturaDemi';
+        font: 16px 'OpenSansBold';
         color: #f14a58;
         margin-top: -10px;
     }
@@ -1371,9 +1350,10 @@ a.messageAboutChoice {
     }
 
     .filter .filterTablet {
-        display: block;
+        display: none;
+        /*Hide for this resoltion a section filter*/
         cursor: pointer;
-        font: 16px/65px 'FuturaDemi';
+        font: 14px/65px 'OpenSansBold';
         margin-bottom: 0;
         height: 65px;
         overflow-y: hidden;
@@ -1388,7 +1368,7 @@ a.messageAboutChoice {
     }
 
     .filter option {
-        font: 36px/65px 'FuturaDemi';
+        font: 17px/65px 'OpenSansBold';
         color: #a8a8a8;
         padding-top: 0;
     }
@@ -1398,7 +1378,7 @@ a.messageAboutChoice {
     }
 
     .nameFilter {
-        font: 12px 'HelveticaNeueBold';
+        font: 12px 'RobotoBold';
         color: #000;
     }
 
@@ -1443,11 +1423,6 @@ a.messageAboutChoice {
     .leftBanner {
         border-right: 1px solid #e5e5e5;
     }
-
-    /*.bannersStart .bannerBlock img{*/
-    /*    width: inherit;*/
-    /*}*/
-
     .bannersStart .leftBanner img {
         width: 80%;
     }
@@ -1456,7 +1431,7 @@ a.messageAboutChoice {
         margin-top: 15%;
     }
     .menu li a{
-        font: 12px/22px 'FuturaDemi', sans-serif;
+        font: 12px/22px 'OpenSansBold', sans-serif;
     }
 
 }
@@ -1508,7 +1483,7 @@ a.messageAboutChoice {
         width: 13%;
     }
     .menu li a{
-        font: 12px/22px 'FuturaDemi', sans-serif;
+        font: 10.5px/22px 'OpenSansBold', sans-serif;
     }
     .rightBanner {
         display: none;
@@ -1584,7 +1559,7 @@ a.messageAboutChoice {
     }
 
     .menu li a {
-        font: 28px/60px 'FuturaDemi';
+        font: 24px/60px 'OpenSansBold';
     }
 
     .menu {
@@ -1783,7 +1758,7 @@ a.messageAboutChoice {
     }
 
     .extraOff .customMiniHead {
-        font: 20px/30px 'FuturaDemi';
+        font: 18px/30px 'OpenSansBold';
     }
 
     .bannersCatalog .rightBanner {
@@ -1800,7 +1775,7 @@ a.messageAboutChoice {
     }
 
     .optionBag {
-        font: 10px/20px 'HelveticaNeueRegular';
+        font: 10px/20px 'RobotoRegular';
     }
 
     .removeItem {
