@@ -294,7 +294,6 @@ button:focus {
     color: inherit;
     text-decoration: none;
     letter-spacing: 0.8px;
-
 }
 
 .logo:hover {
@@ -475,27 +474,78 @@ header .display {
 
 /* ==================== END BANNER SECTION =============*/
 /* ==================== Best offer =============*/
-.title-best-offer{
+.best-offer{
+    border: 1px solid #e5e5e5;
+}
+.best-offer-left-slider{
+    max-width: 420px;
+    width: 100%;
+    margin-bottom: 99px;
+}
+.best-offer-left-slider-wrap-left{
+    text-align: center;
+    max-width: 240px;
+    width: 100%;
+    float: left;
+}
+.best-offer-left-slider-wrap-right{
+    max-width: 180px;
+    width: 100%;
+    text-align: center;
+    float: right;
+}
+.best-offer-plus{
+    padding-top: 125%;
+}
+.best-offer-title{
     margin-top: 98px;
     text-align: center;
     color: #000000;
-    font-family: "Open Sans", sans-serif;
-    /*исправить шрифты*/
+    font-family: "OpenSansBold", sans-serif;
     font-size: 50px;
-    font-weight: 700;
-    line-height: 65px;
     letter-spacing: 1.5px;
 }
-.description-best-offer{
+.best-offer-description{
+    margin-top: 27px;
     text-align: center;
     color: #000000;
     font-family: "Times New Roman PS - Italic MT", serif;
-    /*исправить шрифты*/
     font-size: 16px;
     font-weight: 400;
-    line-height: 30px;
+    margin-bottom: 70px;
+}
+.best-offer-up_row{
+    margin-bottom: 40px;
+}
+.best-offer-up_row,
+.best-offer-down_row{
+    cursor: pointer;
+}
+.best-offer-photo_goods_price{
+    margin-bottom: 40px;
+}
+.best-offer-photo_about{
+    text-align: center;
+    margin-top: 49px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-family: "RobotoBold", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+}
+.best-offer-photo_goods_price{
+    text-align: center;
+    color: #000000;
+    font-family: "RobotoRegular",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.42px;
 }
 /* ==================== SECTION NEW ARRIVALS =============*/
+.arrivals{
+    padding-top: 93px;
+}
 .rowArrivals {
     margin-top: 0;
     display: flex;
@@ -514,8 +564,8 @@ header .display {
 }
 .arrivalButton {
     text-align: center;
-    margin-top: 8%;
-    margin-bottom: 5%;
+    margin-top: 74px;
+    margin-bottom: 100px;
 }
 
 /* ================= END SECTION NEW ARRIVALS  =============*/
