@@ -241,7 +241,7 @@ a:hover {
 }
 
 .customButton {
-    padding: 20px 105px;
+    padding: 18.5px 97.5px;
     border: 1px solid #e5e5e5;
     color: #000;
     font: 26px/65px 'OpenSansBold';
@@ -477,26 +477,6 @@ header .display {
 .best-offer{
     border: 1px solid #e5e5e5;
 }
-.best-offer-left-slider{
-    max-width: 420px;
-    width: 100%;
-    margin-bottom: 99px;
-}
-.best-offer-left-slider-wrap-left{
-    text-align: center;
-    max-width: 240px;
-    width: 100%;
-    float: left;
-}
-.best-offer-left-slider-wrap-right{
-    max-width: 180px;
-    width: 100%;
-    text-align: center;
-    float: right;
-}
-.best-offer-plus{
-    padding-top: 125%;
-}
 .best-offer-title{
     margin-top: 98px;
     text-align: center;
@@ -514,6 +494,32 @@ header .display {
     font-weight: 400;
     margin-bottom: 70px;
 }
+.best-offer-wrap-main-part{
+    max-width: 1180px;
+    width: 100%;
+}
+.best-offer-left-slider{
+    max-width: 420px;
+    width: 35%;
+    margin-bottom: 99px;
+    float: left;
+}
+.best-offer-left-slider-wrap-left{
+    text-align: center;
+    max-width: 240px;
+    width: 57%;
+    float: left;
+}
+.best-offer-left-slider-wrap-right{
+    max-width: 180px;
+    width: 43%;
+    text-align: center;
+    float: left;
+}
+.best-offer-plus{
+    padding-top: 125%;
+}
+
 .best-offer-up_row{
     margin-bottom: 40px;
 }
@@ -541,6 +547,47 @@ header .display {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.42px;
+}
+.best-offer-right-block{
+    max-width: 340px;
+    width: 30%;
+    text-align: center;
+    float: left;
+}
+.best-offer-right-block-discount{
+    display: inline-block;
+    margin-top: 152px;
+    margin-bottom: 6px;
+    color: #757575;
+    font-family: 'RobotoRegular',sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 0.78px;
+    line-height: 55px;
+    position: relative;
+    padding-right: 45%;
+}
+.best-offer-right-block-discount:after{
+    content: '';
+    position: absolute;
+    width: 92px;
+    height: 55px;
+    background: url("../img/best-offer/best-offer-red_line.png") no-repeat;
+    top: 0;
+    left: 0;
+
+}
+.best-offer-right-block-price{
+    color: #000000;
+    font-family: 'RobotoBold',sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 1.02px;
+    margin-bottom: 80px;
+}
+.best-offer .customButton{
+padding-left: 28.5%;
+padding-right: 28.5%;
 }
 /* ==================== SECTION NEW ARRIVALS =============*/
 .arrivals{
@@ -1260,24 +1307,24 @@ a.messageAboutChoice {
     .overlayIndivid {
         top:69%;
     }
-
     .products .arrivalItem:nth-child(n+9) {
         margin-top: 71px;
     }
-
 }
 
 @media (min-width: 1025px) and (max-width: 1199px) {
     .menu li {
         margin-right: 45px;
     }
-
     .arrivalItem {
         margin-right: 15px;
     }
 
     .extraOff {
         width: 1010px;
+    }
+    .best-offer .customButton{
+        font: 23px/57px 'OpenSansBold';
     }
 }
 @media (max-width: 1024px) {
@@ -1483,7 +1530,9 @@ a.messageAboutChoice {
     .menu li a{
         font: 12px/22px 'OpenSansBold', sans-serif;
     }
-
+    .best-offer{
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
