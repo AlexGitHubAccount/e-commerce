@@ -249,7 +249,8 @@ a:hover {
 }
 
 .customButton:hover {
-    background: #f5f5f5;
+    background: #ffffff;
+    border: 1px solid #f14a58;
 }
 
 .customMiniHead {
@@ -478,7 +479,7 @@ header .display {
     border: 1px solid #e5e5e5;
 }
 .best-offer-title{
-    margin-top: 98px;
+    margin-top: 100px;
     text-align: center;
     color: #000000;
     font-family: "OpenSansBold", sans-serif;
@@ -588,6 +589,9 @@ header .display {
 .best-offer .customButton{
 padding-left: 28.5%;
 padding-right: 28.5%;
+}
+.best-offer-right-block-button.tablet-layout{
+    display: none;
 }
 /* ==================== SECTION NEW ARRIVALS =============*/
 .arrivals{
@@ -1359,7 +1363,8 @@ a.messageAboutChoice {
         font-size: 16px;
     }
     .customButton {
-        font-size: 24px;
+        font-size: 20px;
+        padding: 23px 114px;
     }
     .footerQuestions,
     .footerPhone{
@@ -1494,8 +1499,6 @@ a.messageAboutChoice {
     .fullItem,.tumbs  {
         width: 100%;
     }
-
-
     .tumbs {
         margin-top: 30px;
         display: flex;
@@ -1530,8 +1533,42 @@ a.messageAboutChoice {
     .menu li a{
         font: 12px/22px 'OpenSansBold', sans-serif;
     }
-    .best-offer{
+    .best-offer-title{
+        margin-top: 100px;
+        font-size: 40px;
+        letter-spacing: 1.2px;
+    }
+    .best-offer-photo_goods_price{
+        margin-bottom: 30px;
+    }
+    .best-offer-left-slider{
+        margin-bottom: 75px;
+    }
+    .best-offer-right-block-discount{
+        margin-top: 65px;
+        font-size: 22px;
+        letter-spacing: 0.66px;
+    }
+    .best-offer-right-block-discount:after{
+        content: '';
+        width: 77px;
+        height: 46px;
+    }
+    .best-offer-right-block-price{
+        font-size: 30px;
+        letter-spacing: 0.9px;
+    }
+    .best-offer-right-block-button{
         display: none;
+    }
+    .best-offer-right-block-button.tablet-layout{
+        display: block;
+        padding-bottom: 100px;
+        text-align: center;
+    }
+    .best-offer .customButton{
+        font-size: 20px;
+        padding: 23px 114px;
     }
 }
 
