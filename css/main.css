@@ -1278,7 +1278,9 @@ a.messageAboutChoice {
     font: 30px/65px 'OpenSansBold';
     color: #f14a58;
 }
-
+.shopping-bag-red-text{
+    color: #f15865;
+}
 /*media-queries for all pages*/
 @media (min-width: 1025px) {
     .arrivalItem {

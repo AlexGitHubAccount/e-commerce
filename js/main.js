@@ -44,7 +44,8 @@ App.prototype.polyfillClosest = function () {
     };
 };
 
-Search.prototype = Object.create(App.prototype);
+Search.prototype = Object.create(App.prototype);//Create an prototype for an object Search
+//  (for tag input) which located in the header
 Menu.prototype = Object.create(App.prototype);
 OfferBanner.prototype = Object.create(App.prototype);
 Filter.prototype = Object.create(App.prototype);
@@ -407,6 +408,6 @@ Shop.prototype.totalSum = function () {
     this.totalCost.innerHTML = localStorage.commonPrice ? ('£ ' + localStorage.commonPrice) : '£ 0';
 };
 //shop js
-
+console.dir(Shop);
 
 
