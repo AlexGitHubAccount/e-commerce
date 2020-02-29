@@ -167,19 +167,16 @@ img {
 .padding-right {
     padding-right: 0;
 }
-
-@media (min-width: 1200px) {
+@media (min-width: 1200px){
     .container {
         width: 1180px;
     }
 }
-
 @media (min-width: 1025px) and (max-width: 1199px) {
     .container {
         width: 1010px;
     }
 }
-
 @media (max-width: 1024px) {
     .container {
         width: 92%;
@@ -476,7 +473,10 @@ header .display {
 /* ==================== END BANNER SECTION =============*/
 /* ==================== Best offer =============*/
 .best-offer{
-    border: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 .best-offer-title{
     margin-top: 100px;
@@ -626,6 +626,8 @@ padding-right: 28.5%;
 .footer {
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .leftFooter {
@@ -755,8 +757,10 @@ padding-right: 28.5%;
 /*+++++++++++++  PAGE CATALOG  ++++++++++++++++++*/
 .filter {
     border-bottom: 1px solid #e5e5e5;
-    border-top: 1px solid #e5e5e5;
     position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+
 }
 
 
@@ -1032,9 +1036,6 @@ padding-right: 28.5%;
 
 /*Third page*/
 /*+++++++++++++++++++Item details page++++++++++++++++++++++++++*/
-.breadCrumbs {
-    border-top: 1px solid #e5e5e5;
-}
 .backToCatalog {
     font: 16px/55px 'OpenSansBold';
     margin-left: 16px
@@ -1165,15 +1166,6 @@ a.messageAboutChoice {
 .bannersCatalog .overlay {
     right: 13%;
 }
-
-.bagTitle {
-    border-top: 1px solid #e5e5e5;
-}
-
-.bagTitle, .breadCrumbs {
-    border-bottom: 1px solid #e5e5e5;
-}
-
 /*Fourth page*/
 /* ++++++++++++++++++SHOP +++++++++++++++++++++++++++*/
 .titleShoppingBag {
@@ -1225,10 +1217,11 @@ a.messageAboutChoice {
 }
 
 .infoBag {
+    margin: 5% auto 0;
+    max-width: 1300px;
     font: 12px/40px 'OpenSansBold';
     background: #f7f7f7;
-    padding-left: 18%;
-    margin-top: 5%;
+    text-align: center;
     border-top: 1px solid #e5e5e5;
 }
 
@@ -1572,6 +1565,13 @@ a.messageAboutChoice {
         font-size: 20px;
         padding: 23px 114px;
     }
+    .totalTitle {
+        font: 18px 'RobotoBold';
+    }
+
+    .totalCost {
+        font: 18px 'RobotoBold';
+    }
 }
 
 @media (max-width: 768px) {
@@ -1629,6 +1629,13 @@ a.messageAboutChoice {
     .leftBanner {
         width: 100%;
         height: 100%;
+    }
+    .totalTitle {
+        font: 13px 'RobotoBold';
+    }
+
+    .totalCost {
+        font: 13px 'RobotoBold';
     }
 }
 
@@ -1740,6 +1747,13 @@ a.messageAboutChoice {
     }
     .bag {
         margin-left: 71%;
+    }
+    .totalTitle {
+        font: 10px 'RobotoBold';
+    }
+
+    .totalCost {
+        font: 10px 'RobotoBold';
     }
 }
 
@@ -1950,5 +1964,8 @@ a.messageAboutChoice {
 @media (max-width: 550px) {
     .bag {
         margin-left: 60%;
+    }
+    .totalBlock.col{
+        padding-left: 0;
     }
 }

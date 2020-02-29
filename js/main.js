@@ -202,6 +202,7 @@ GoToItem.prototype.goToDetailItem = function (e) {
     var target = e && e.target || e.srcElement;
 
     var item = target.closest('.arrivalItem').getAttribute('data-product');
+    console.log(item);
     if (!item) return;
     document.location.href = 'item' + item + '.html';
     return item;
@@ -408,6 +409,5 @@ Shop.prototype.totalSum = function () {
     this.totalCost.innerHTML = localStorage.commonPrice ? ('£ ' + localStorage.commonPrice) : '£ 0';
 };
 //shop js
-console.dir(Shop);
 
 
