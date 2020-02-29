@@ -10,6 +10,7 @@
     <script defer src="js/catalog.js"></script>
     <script defer src="js/best-offer.js"></script>
     <script defer src="js/main.js"></script>
+    <script defer src="js/item-details.js"></script>
     <title>item-details-page</title>
 </head>
 <body>
@@ -59,7 +60,7 @@
     </div>
 </section>
 
-<section class="itemProduct">
+<section id="itemProduct" class="itemProduct" data-id="80d32566-d81c-4ba0-9edf-0eceda3b4360">
     <div class="container padding">
         <div class="row clearfix">
             <div class=" col fullItem">
@@ -82,10 +83,9 @@
         </div>
 
         <div class="rowInfoProduct">
-            <p class="nameProduct" data-nameProduct="1">Dark classic fit suit</p>
-            <p class="priceItem">£180.60</p>
-            <p class="descProduct">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs and a subtle stripe pattern throughout. </p>
-        </div>
+            <p class="nameProduct" id="title" data-nameProduct="1"></p>
+            <p class="priceItem">£<span id="price"></span></p>
+            <p class="descProduct" id="description"></div>
         <div class="rowOptionsProduct">
             <p class="size optionProductTitle">Size</p>
             <div class="sizeOptions">

@@ -25,9 +25,10 @@ App.prototype.init = function () {
 };
 
 App.prototype.storage = function () {
-    this.localStorageCommonPrice = (localStorage.commonPrice) ? localStorage.commonPrice : "";
+    this.localStorageCommonPrice = (localStorage.commonPrice) ? `£ ${localStorage.commonPrice}` : "";
     this.localStorageCountItems = (localStorage.countItems) ? localStorage.countItems : "";
-    document.querySelector('.commonPrice').innerHTML = '£' + this.localStorageCommonPrice + '<span class="countItems">('+ this.localStorageCountItems +')</span>';
+
+    document.querySelector('.commonPrice').innerHTML = this.localStorageCommonPrice + '<span class="countItems">('+ this.localStorageCountItems +')</span>';
     return [this.localStorageCommonPrice, this.localStorageCountItems];
 };
 
@@ -129,51 +130,64 @@ Filter.prototype.openFilter = function () {
     this.desktopSelects.classList.toggle('mobileSelects');
 };
 
+document.onmouseover = function(event) {
+    let container = document.querySelector(".desktopSelects");
+    if (!container) return;
+
+    if (!container.contains(event.target)) {
+        let items = container.querySelectorAll("select");
+        for (let i = 0; i < items.length; i++) {
+            items[i].classList.remove("display");
+        }
+    }
+};
+
 Filter.prototype.openSelect = function (e) {
-    var target = e && e.target || e.srcElement;
+    let target = e && e.target || e.srcElement;
 
     if (target.parentNode.getAttribute('class') != 'selectLabel') return;
 
     target = target.parentNode.parentNode;
-    for (var i = 0; i < this.selectItems.length; i++) {
+    for (let i = 0; i < this.selectItems.length; i++) {
         if (this.selectItems[i] != target) {
             this.selectItems[i].querySelector('select').classList.remove('display');
         }
     }
-    target.querySelector('select').classList.toggle('display');
 
-    var optionLength = target.querySelector('select').children.length;
+    target.querySelector('select').classList.add('display');
+
+    let optionLength = target.querySelector('select').children.length;
     target.querySelector('select').setAttribute('size', optionLength);
 };
 
 Filter.prototype.desktopToggle = function () {
-    this.desktopSelects.addEventListener('click', this.openSelect.bind(this));
-    for (var i = 0; i < this.options.length; i++) {
+    this.desktopSelects.addEventListener('mouseover', this.openSelect.bind(this));
+
+    for (let i = 0; i < this.options.length; i++) {
         this.options[i].closest('select').addEventListener('click', this.closeSelect.bind(this));
     }
 };
 
 Filter.prototype.closeSelect = function (e) {
-    var target = e && e.target || e.srcElement;
+    let target = e && e.target || e.srcElement;
 
     this.valueFilter = target.closest('.selectItem').querySelector('.valueFilter');
     this.nameFilter = target.closest('.selectItem').querySelector('.nameFilter');
 
     target.closest('select').classList.remove('display');
 
-    target = (target.tagName == 'SELECT') ? target(target.options.selectedIndex) : target;
-    var optionVal = (target.value === 'notSelected') ?
-        this.filterStyles('remove', '', target) :
-        this.filterStyles('add', target.innerText, target);
+    let currentTarget = (target.tagName.toLowerCase() == 'select') ? target.options.selectedIndex : target;
+    let optionVal = (currentTarget.value === 'notSelected') ?
+        this.filterStyles('remove', '', currentTarget) :
+        this.filterStyles('add', target.innerText, currentTarget);
 
     return optionVal;
 
 };
 
 Filter.prototype.filterStyles = function (method, value, option) {
-    console.log(value ,option);
-    var firstItem = document.querySelector('.desktopSelects').firstElementChild;
-    var lastItem = document.querySelector('.desktopSelects').lastElementChild;
+    let firstItem = document.querySelector('.desktopSelects').firstElementChild;
+    let lastItem = document.querySelector('.desktopSelects').lastElementChild;
 
     option.closest('.selectItem').classList[method]('selectedItem');
     this.nameFilter.classList[method]('nameFilterSmall');
@@ -188,6 +202,7 @@ Filter.prototype.filterStyles = function (method, value, option) {
     }
 
 };
+
 Filter.prototype.mobileSelectedOptions = function () {
     this.filterTablet = document.querySelector('.filterTablet');
 
@@ -199,11 +214,12 @@ Filter.prototype.mobileSelectedOptions = function () {
 
 
 GoToItem.prototype.goToDetailItem = function (e) {
-    var target = e && e.target || e.srcElement;
+    let target = e && e.target || e.srcElement;
 
-    var item = target.closest('.arrivalItem').getAttribute('data-product');
-    console.log(item);
+    let item = target.closest('.arrivalItem').getAttribute('data-product');
+
     if (!item) return;
+
     document.location.href = 'item' + item + '.html';
     return item;
 };
@@ -216,6 +232,8 @@ function Bag (button) {
     this.buttonAdd = button;
     this.cart =  (localStorage.cart) ? JSON.parse(localStorage.cart) : {};
     this.buttonAdd.addEventListener('click', this.addGoose.bind(this));
+
+    document.querySelector('.commonPrice').innerHTML = "(0)";
 }
 
 function Thumbnail(thumbnail) {
@@ -242,11 +260,12 @@ Thumbnail.prototype.doFullImg = function (e) {
 };
 
 ProductOptions.prototype.addClassToOption = function (e) {
-    var target = e && e.target || e.srcElement;
-    var listOption = target.parentNode;
+    let target = e && e.target || e.srcElement;
+    let listOption = target.parentNode;
 
-    if (target.tagName != 'LI') return;
-    for (var i = 0; i < listOption.children.length; i++) {
+    if (target.tagName.toLowerCase() != 'li') return;
+
+    for (let i = 0; i < listOption.children.length; i++) {
         listOption.children[i].classList.remove('activeOption');
     }
     target.classList.add('activeOption');
@@ -255,30 +274,49 @@ ProductOptions.prototype.addClassToOption = function (e) {
 
 Bag.prototype.addGoose = function (e) {
     e.preventDefault();
-    var quantityOfGooses = 0;
-    var price = 0;
 
-    if (document.querySelectorAll('.activeOption').length === document.querySelectorAll('.listOptions').length) {
+    let quantityOfGooses = 0;
+    let price = 0;
+
+    function getElements(select) {
+        return document.querySelectorAll(select).length
+    }
+
+    function removeActionClass() {
+        const radioList = document.querySelectorAll(".listOptions li");
+        for (let i = 0; i < radioList.length; i++) {
+            radioList[i].classList.remove("activeOption");
+        }
+    }
+
+    if (getElements('.activeOption') === getElements('.listOptions')) {
         document.querySelector('.chooseOptions').classList.remove('display');
-        document.querySelector('.addedGoose').classList.remove('display');
+        setTimeout(function () {
+            document.querySelector('.addedGoose').classList.remove('display');
+        },4000);
+
         this.addCart(e);
 
-        for (var key in this.cart) {
+        for (let key in this.cart) {
             quantityOfGooses++;
             price += +this.cart[key].price.split('£')[1]*this.cart[key].qw;
         }
 
         localStorage.countItems = quantityOfGooses;
-        localStorage.commonPrice = price;
-        document.querySelector('.commonPrice').innerHTML = '£ ' + localStorage.commonPrice + '<span class="countItems"> ('+ localStorage.countItems  +')</span>';
+        localStorage.commonPrice = price.toFixed(2);
+
+        document.querySelector('.commonPrice').innerHTML =
+            `£ ${localStorage.commonPrice}<span class="countItems"> (${localStorage.countItems})</span>`;
         document.querySelector('.addedGoose').classList.add('display');
     } else {
         document.querySelector('.chooseOptions').classList.add('display');
     }
+
+    removeActionClass();
 };
 
 Bag.prototype.addCart = function (e) {
-    var productName = document.querySelector('.nameProduct').innerText,
+    let productName = document.querySelector('.nameProduct').innerText,
         productPrice = document.querySelector('.priceItem').innerText,
         productSize = document.querySelector('.sizeOptions').querySelector('.activeOption').innerText,
         productColor = document.querySelector('.colorOptions').querySelector('.activeOption').innerText,
@@ -301,7 +339,7 @@ Bag.prototype.addCart = function (e) {
         };
     }
 
-    var obj = JSON.stringify(this.cart);
+    let obj = JSON.stringify(this.cart);
     localStorage.cart = obj;
 };
 // item details js
@@ -321,14 +359,14 @@ function Shop (shop) {
     this.emptyBag.addEventListener('click', this.clearBag.bind(this, ''));
     this.totalSum();
 
-    for (var key in this.cart) {
+    for (let key in this.cart) {
         str = this.createItem(this.cart[key], key);
         document.querySelector('.shopItems').insertAdjacentHTML('beforeEnd', str);
     }
 
     this.removeButton = document.querySelectorAll('.removeItem');
 
-    for (var i = 0; i < this.removeButton.length; i++) {
+    for (let i = 0; i < this.removeButton.length; i++) {
         this.removeButton[i].addEventListener('click', this.removeItem.bind(this));
     }
 }
@@ -367,18 +405,20 @@ Shop.prototype.removeItem = function (e) {
     item.parentNode.removeChild(item);
     delete this.cart[data];
 
-    var object = JSON.stringify(this.cart);
+    let object = JSON.stringify(this.cart);
     localStorage.cart = object;
 
     this.cart =  (localStorage.cart) ? JSON.parse(localStorage.cart) : {};
-    for (var key in this.cart) {
+    for (let key in this.cart) {
         quantityOfGooses++;
         price += +this.cart[key].price.split('£')[1]*this.cart[key].qw;
     }
 
     localStorage.countItems = quantityOfGooses;
     localStorage.commonPrice = price;
-    document.querySelector('.commonPrice').innerHTML = '£' + localStorage.commonPrice + '<span class="countItems">('+ localStorage.countItems  +')</span>';
+
+    document.querySelector('.commonPrice').innerHTML = `£ ${localStorage.commonPrice} <span class="countItems">(${localStorage.countItems})</span>`;
+
     this.checkEmpty();
     this.totalSum();
 };
@@ -388,7 +428,7 @@ Shop.prototype.clearBag = function (param, e) {
     if (e) e.preventDefault();
 
     localStorage.clear();
-    document.querySelector('.commonPrice').innerHTML = '';
+    document.querySelector('.commonPrice').innerHTML = '(0)';
 
     if (param == '') {
         this.emptyInfo();
@@ -409,5 +449,6 @@ Shop.prototype.totalSum = function () {
     this.totalCost.innerHTML = localStorage.commonPrice ? ('£ ' + localStorage.commonPrice) : '£ 0';
 };
 //shop js
+
 
 
