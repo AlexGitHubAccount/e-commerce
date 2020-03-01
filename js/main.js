@@ -381,10 +381,10 @@ Shop.prototype.createItem = function (item, key) {
                     </p>
                     <p class="optionBag">Color: <span class="colorBag">${item.color}</span></p>
                     <p class="optionBag">Size: <span class="sizeBag">${item.size}</span></p>
-                    <p class="optionBag">Quantity: 
-                        <img src="img/shopping-bag/minus.png" class="shopOptions-sign"></img>
+                    <p class="optionBag count">Quantity: 
+                        <img data-count="minus" src="img/shopping-bag/minus.png" class="shopOptions-sign"></img>
                         <span class="quantityBag">${item.qw}</span>
-                        <img src="img/shopping-bag/plus.png" class="shopOptions-sign"></img>
+                        <img data-count="plus" src="img/shopping-bag/plus.png" class="shopOptions-sign"></img>
                     </p>
                     <p class="removeItem">Remove Item</p>
                 </div>
