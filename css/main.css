@@ -1274,6 +1274,10 @@ a.messageAboutChoice {
 .shopping-bag-red-text{
     color: #f15865;
 }
+.shopOptions-sign{
+    cursor: pointer;
+    padding: 0 8px;
+}
 /*media-queries for all pages*/
 @media (min-width: 1025px) {
     .arrivalItem {
