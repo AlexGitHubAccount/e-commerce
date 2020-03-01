@@ -383,7 +383,7 @@ Shop.prototype.createItem = function (item, key) {
                     <p class="optionBag">Size: <span class="sizeBag">${item.size}</span></p>
                     <p class="optionBag">Quantity: 
                         <span class="optionBag_sign">-</span>
-                        <span class="quantityBag 1111">${item.qw}</span>
+                        <span class="quantityBag">${item.qw}</span>
                         <span class="optionBag_sign">+</span>
                     </p>
                     <p class="removeItem">Remove Item</p>
