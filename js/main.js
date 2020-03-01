@@ -28,14 +28,14 @@ App.prototype.storage = function () {
     this.localStorageCommonPrice = (localStorage.commonPrice) ? `£ ${localStorage.commonPrice}` : "";
     this.localStorageCountItems = (localStorage.countItems) ? localStorage.countItems : "";
 
-    document.querySelector('.commonPrice').innerHTML = this.localStorageCommonPrice + '<span class="countItems">('+ this.localStorageCountItems +')</span>';
+    document.querySelector('.commonPrice').innerHTML = this.localStorageCommonPrice + '<span class="countItems"> ('+ this.localStorageCountItems +')</span>';
     return [this.localStorageCommonPrice, this.localStorageCountItems];
 };
 
 App.prototype.polyfillClosest = function () {
     if (!Element.prototype.matches) Element.prototype.matches = Element.prototype.msMatchesSelector;
     if (!Element.prototype.closest) Element.prototype.closest = function (selector) {
-        var el = this;
+        let el = this;
         while (el) {
             if (el.matches(selector)) {
                 return el;
@@ -232,8 +232,6 @@ function Bag (button) {
     this.buttonAdd = button;
     this.cart =  (localStorage.cart) ? JSON.parse(localStorage.cart) : {};
     this.buttonAdd.addEventListener('click', this.addGoose.bind(this));
-
-    document.querySelector('.commonPrice').innerHTML = "(0)";
 }
 
 function Thumbnail(thumbnail) {
@@ -299,7 +297,7 @@ Bag.prototype.addGoose = function (e) {
 
         for (let key in this.cart) {
             quantityOfGooses++;
-            price += +this.cart[key].price.split('£')[1]*this.cart[key].qw;
+            price += +(this.cart[key].price.split('£')[1]*this.cart[key].qw);
         }
 
         localStorage.countItems = quantityOfGooses;
@@ -372,20 +370,21 @@ function Shop (shop) {
 }
 
 Shop.prototype.createItem = function (item, key) {
-    var str = '<div class="shoppingBlock clearfix" data-block="'+ key +'">'+
-        '<div class="shopImg">'+
-        '<img src="' + item.img + '" alt="">'+
-        '<p class="priceBag">' + item.price + '</p>'+
-        '</div>'+
-        '<div class="shopOptions">'+
-        '<p class="titleProduct"><a href="item1.html" class="productBag">' + item.product + '</a></p>'+
-        '<p class="optionBag">Color: <span class="colorBag">' + item.color + '</span></p>'+
-        '<p class="optionBag">Size: <span class="sizeBag">' + item.size +'</span></p>'+
-        '<p class="optionBag">Quantity: <span class="quantityBag">' + item.qw +'</span></p>'+
-        '<p class="removeItem">Remove Item</p>'+
-        '</div>'+
-        '</div>';
-    return str;
+    return (`<div class="shoppingBlock clearfix" data-block="${key}">
+            <div class="shopImg">
+                <img src="${item.img}" alt="">
+                <p class="priceBag">${item.price}</p>
+            </div>
+            <div class="shopOptions">
+                <p class="titleProduct">
+                    <a href="item1.html" class="productBag">${item.product}</a>
+                </p>
+                <p class="optionBag">Color: <span class="colorBag">${item.color}</span></p>
+                <p class="optionBag">Size: <span class="sizeBag">${item.size}</span></p>
+                <p class="optionBag">Quantity: <span>-</span><span class="quantityBag">${item.qw}</span><span>+</span></p>
+                <p class="removeItem">Remove Item</p>
+            </div>
+        </div>`);
 };
 
 Shop.prototype.buyGoose = function (e) {
@@ -396,7 +395,7 @@ Shop.prototype.buyGoose = function (e) {
 };
 
 Shop.prototype.removeItem = function (e) {
-    var target = e && e.target || e.srcElement,
+    let target = e && e.target || e.srcElement,
         item = target.closest('.shoppingBlock'),
         data = item.getAttribute('data-block'),
         price = 0,
@@ -417,7 +416,7 @@ Shop.prototype.removeItem = function (e) {
     localStorage.countItems = quantityOfGooses;
     localStorage.commonPrice = price;
 
-    document.querySelector('.commonPrice').innerHTML = `£ ${localStorage.commonPrice} <span class="countItems">(${localStorage.countItems})</span>`;
+    document.querySelector('.commonPrice').innerHTML = `£ ${localStorage.commonPrice} <span class="countItems"> (${localStorage.countItems})</span>`;
 
     this.checkEmpty();
     this.totalSum();
