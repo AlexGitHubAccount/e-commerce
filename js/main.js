@@ -371,20 +371,24 @@ function Shop (shop) {
 
 Shop.prototype.createItem = function (item, key) {
     return (`<div class="shoppingBlock clearfix" data-block="${key}">
-            <div class="shopImg">
-                <img src="${item.img}" alt="">
-                <p class="priceBag">${item.price}</p>
-            </div>
-            <div class="shopOptions">
-                <p class="titleProduct">
-                    <a href="item1.html" class="productBag">${item.product}</a>
-                </p>
-                <p class="optionBag">Color: <span class="colorBag">${item.color}</span></p>
-                <p class="optionBag">Size: <span class="sizeBag">${item.size}</span></p>
-                <p class="optionBag">Quantity: <span>-</span><span class="quantityBag">${item.qw}</span><span>+</span></p>
-                <p class="removeItem">Remove Item</p>
-            </div>
-        </div>`);
+                <div class="shopImg">
+                    <img src="${item.img}" alt="">
+                    <p class="priceBag">${item.price}</p>
+                </div>
+                <div class="shopOptions">
+                    <p class="titleProduct">
+                        <a href="item1.html" class="productBag">${item.product}</a>
+                    </p>
+                    <p class="optionBag">Color: <span class="colorBag">${item.color}</span></p>
+                    <p class="optionBag">Size: <span class="sizeBag">${item.size}</span></p>
+                    <p class="optionBag">Quantity: 
+                        <span class="optionBag_sign">-</span>
+                        <span class="quantityBag 1111">${item.qw}</span>
+                        <span class="optionBag_sign">+</span>
+                    </p>
+                    <p class="removeItem">Remove Item</p>
+                </div>
+            </div>`);
 };
 
 Shop.prototype.buyGoose = function (e) {
