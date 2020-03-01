@@ -452,6 +452,3 @@ Shop.prototype.totalSum = function () {
     this.totalCost.innerHTML = localStorage.commonPrice ? ('£ ' + localStorage.commonPrice) : '£ 0';
 };
 //shop js
-
-
-

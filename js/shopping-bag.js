@@ -1,7 +1,7 @@
 (function () {
 
-    function countChange(e) {
-        let target = e && e.target || e.srcElement;
+    function countChange(event) {
+        let target = event && event.target || event.srcElement;
         let btn = target.getAttribute('data-count');
 
         if (!btn) return;
@@ -9,7 +9,6 @@
         if (btn === "plus") {
             target.previousElementSibling.innerHTML++;
         }
-
         if (btn === "minus") {
             target.nextElementSibling.innerHTML === "1" ? target.nextElementSibling.innerText = 1 : target.nextElementSibling.innerHTML--;
         }
