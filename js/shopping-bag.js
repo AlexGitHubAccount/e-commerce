@@ -1,3 +1,4 @@
+//Function for increment amount of quantity of items inside the bag
 (function () {
 
     function countChange(event) {
@@ -22,5 +23,5 @@
         }
     }
 
-   setTimeout(function () { initCount(); }, 0)
+   setTimeout(function () { initCount(); }, 0);
 })();

@@ -352,7 +352,7 @@ function Shop (shop) {
     this.emptyBag = document.querySelector('.emptyBag');
     this.cart =  (localStorage.cart) ? JSON.parse(localStorage.cart) : {};
     this.checkEmpty();
-    var str = '';
+    let str = '';
     this.buttonBuy.addEventListener('click', this.buyGoose.bind(this));
     this.emptyBag.addEventListener('click', this.clearBag.bind(this, ''));
     this.totalSum();
