@@ -10,7 +10,8 @@
 
         return function () {
             document.getElementById("title").innerText = currentItem[0].title;
-            document.getElementById("description").innerText = currentItem[0].description;
+            document.getElementsByClassName("descProduct")[0].innerText = currentItem[0].description;
+            document.getElementsByClassName("descProduct")[1].innerText = currentItem[0].description;
             document.getElementById("price").innerText = currentItem[0].discountedPrice;
         }
     };
