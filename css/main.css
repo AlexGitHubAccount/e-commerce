@@ -1,9 +1,5 @@
-/*Snippets for my styles*/
-* {
-    margin: 0;
-    padding: 0;
-}
-/* HTML5 display-role reset for older browsers */
+
+/* Some reset styles for old browsers */
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {
     display: block;
@@ -44,7 +40,7 @@ table {
     zoom:1;
 }
 
-/*Fonts for the project*/
+/*Fonts for my project*/
 
 /*Times New Roman PS - Italic MT */
 @font-face {
@@ -95,13 +91,16 @@ table {
     font-style: normal;
     font-weight: normal;
 }
-/* ==================== COMMON ================  */
+/*Common styles for my project*/
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     letter-spacing: 0.3px;
 }
-
 img {
     vertical-align: middle;
     max-width: 100%;
@@ -118,12 +117,11 @@ img {
     padding-right: 15px;
 }
 
-.row {
+.slider {
     float: left;
     width:50%;
     max-width: 590px;
 }
-
 .container {
     display: block;
     margin: 0 auto;
@@ -156,12 +154,10 @@ img {
 .col-2-3 {
     width: 66.6%;
 }
-
 .padding {
     padding-left: 0;
     padding-right: 0;
 }
-
 .padding-left {
     padding-left: 0;
 }
@@ -169,6 +165,78 @@ img {
 .padding-right {
     padding-right: 0;
 }
+
+a:focus, a:link, a:visited {
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    color: #f14a58;
+}
+.section {
+    padding-top: 9.5%;
+    padding-bottom: 2%;
+}
+.customBanner {
+    color: #000;
+    font: 28px/34px 'OpenSansBold';
+    margin-bottom: 0;
+}
+.customBannerDesc {
+    color: #757575;
+    font: 16px/26px 'Times New Roman PS - Italic MT';
+}
+.customH2 {
+    color: #000;
+    font: 50px/65px 'OpenSansBold';
+    text-align: center;
+}
+.customGoose {
+    font: 14px/24px 'RobotoBold';
+    margin: 43px auto 10px;
+    text-align: center;
+    width: 70%;
+    font-weight: bold;
+}
+.customPrice {
+    font: 14px/24px 'RobotoRegular';
+    text-align: center;
+}
+.customButton {
+    padding: 20px 103.5px;
+    border: 1px solid #e5e5e5;
+    color: #000;
+    font: 24px/65px 'OpenSansBold';
+    transition: 0.5s;
+}
+.customButton:hover {
+    background: #ffffff;
+    border: 1px solid #f14a58;
+}
+.customMiniHead {
+    font: 18px/65px 'OpenSansBold';
+}
+.customItalic {
+    font: 16px/30px 'Times New Roman PS - Italic MT';
+    color: #757575;
+}
+.search::-webkit-input-placeholder {
+    color:#a8a8a8;font: 12px/65px 'OpenSansBold' !important;letter-spacing: 0.3px;
+}
+.search:-moz-placeholder {
+    color:#a8a8a8;font: 12px/65px 'OpenSansBold' !important;letter-spacing: 0.3px;
+}
+.search::-moz-placeholder {
+    color:#a8a8a8;font: 12px/65px 'OpenSansBold' !important;letter-spacing: 0.3px;
+}
+.search:-ms-input-placeholder {
+    color:#a8a8a8;font: 12px/65px 'OpenSansBold' !important;letter-spacing: 0.3px;
+}
+button:focus {
+    outline: none;
+}
+/*Common styles for my project*/
+/*Styles for my wrapper*/
 @media (min-width: 1200px){
     .container {
         width: 1180px;
@@ -182,10 +250,8 @@ img {
 @media (max-width: 1024px) {
     .container {
         width: 92%;
-
     }
 }
-
 @media (max-width: 480px) {
     .container {
         width: 100%;
@@ -193,96 +259,9 @@ img {
         padding-right: 20px;
     }
 }
-
-
-/* =========CUSTOM STYLES ============*/
-a:focus, a:link, a:visited {
-    text-decoration: none;
-    color: #000;
-}
-
-a:hover {
-    color: #f14a58;
-}
-.section {
-    padding-top: 9.5%;
-    padding-bottom: 2%;
-}
-
-.customBanner {
-    color: #000;
-    font: 28px/34px 'OpenSansBold';
-    margin-bottom: 0;
-}
-
-.customBannerDesc {
-    color: #757575;
-    font: 16px/26px 'Times New Roman PS - Italic MT';
-}
-
-.customH2 {
-    color: #000;
-    font: 50px/65px 'OpenSansBold';
-    text-align: center;
-}
-
-.customGoose {
-    font: 14px/24px 'RobotoBold';
-    margin: 43px auto 10px;
-    text-align: center;
-    width: 70%;
-    font-weight: bold;
-}
-
-.customPrice {
-    font: 14px/24px 'RobotoRegular';
-    text-align: center;
-}
-
-.customButton {
-    padding: 20px 103.5px;
-    border: 1px solid #e5e5e5;
-    color: #000;
-    font: 24px/65px 'OpenSansBold';
-    transition: 0.5s;
-}
-
-.customButton:hover {
-    background: #ffffff;
-    border: 1px solid #f14a58;
-}
-
-.customMiniHead {
-    font: 18px/65px 'OpenSansBold';
-}
-
-.customItalic {
-    font: 16px/30px 'Times New Roman PS - Italic MT';
-    color: #757575;
-}
-
-.search::-webkit-input-placeholder {
-    color:#a8a8a8;font: 12px/65px 'OpenSansBold' !important;letter-spacing: 0.3px;
-}
-
-.search:-moz-placeholder {
-    color:#a8a8a8;font: 12px/65px 'OpenSansBold' !important;letter-spacing: 0.3px;
-}
-
-.search::-moz-placeholder {
-    color:#a8a8a8;font: 12px/65px 'OpenSansBold' !important;letter-spacing: 0.3px;
-}
-
-.search:-ms-input-placeholder {
-    color:#a8a8a8;font: 12px/65px 'OpenSansBold' !important;letter-spacing: 0.3px;
-}
-
-button:focus {
-    outline: none;
-}
-
-/* =========END CUSTOMS STYLES ==================*/
-/* ==================== HEADER =============*/
+/*Styles for my wrapper*/
+/*Page index.html*/
+/* Header*/
 .header {
     color: #000;
 }
@@ -295,39 +274,34 @@ button:focus {
     text-decoration: none;
     letter-spacing: 0.8px;
 }
-
 .logo:hover {
     color: #000;
 }
-
 .logoBlock {
     margin-top: 10px;
 }
-
 .logInBlock {
     text-align: right;
     margin-top: 7px;
 }
-
 .singUp, .bag {
     font: 12px/65px 'RobotoRegular', sans-serif;
     color: inherit;
 }
-
 .bag:before {
     content: url('../img/header/bag.png');
     margin-right: 15px;
 }
-
 .bag {
     margin-left: 33px;
 }
-
 .logoMobile {
     font: 30px/65px 'OpenSansBold', sans-serif;
     display: none;
 }
-/* ==================== NAV =============*/
+
+
+/*Section of navigation */
 nav{
     position: relative;
 }
@@ -335,22 +309,18 @@ nav{
     width: 90%;
     margin-bottom: 20px;
 }
-
 .menu li{
     float: left;
     display: inline;
     margin-right: 64px;
 }
-
 .menu li a {
     font: 13px/24px 'OpenSansBold', sans-serif;
     color: inherit;
 }
-
 .menu li a.activeLink {
     color: #f14a58;
 }
-
 .menu li a:hover {
     color: #f14a58;
 }
@@ -362,7 +332,6 @@ nav{
     position: relative;
     margin-top: 5px;
 }
-
 .searchForm:after {
     content: '';
     background: #e5e5e5;
@@ -372,7 +341,6 @@ nav{
     left: 0;
     width: 100%;
 }
-
 .search input {
     width: 85%;
     border: none;
@@ -380,11 +348,9 @@ nav{
     color: #a8a8a8;
     font: 12px 'OpenSansBold';
 }
-
 .search input:focus {
     outline: none;
 }
-
 .search button {
     position: absolute;
     right: 2px;
@@ -392,7 +358,6 @@ nav{
     background: none;
     border: none;
 }
-
 header .openSearch {
     clear: both;
     width: 250px;
@@ -437,11 +402,11 @@ header .display {
     margin-top: 26px;
     background: url("../img/header/mobileMenu.png") top center;
 }
-/* ==================== END NAV =============*/
+/**/
 
-/* ==================== END HEADER =============*/
+/*Section of navigation */
 
-/* ==================== BANNER SECTION =============*/
+/* Banners block*/
 .banners {
     border: 1px solid #e5e5e5;
     position: relative;
@@ -449,7 +414,6 @@ header .display {
     max-width: 1300px;
     margin: 0 auto;
 }
-
 .bannerBlock {
     overflow: hidden;
     position: relative;
@@ -472,8 +436,9 @@ header .display {
     text-align: center;
 }
 
-/* ==================== END BANNER SECTION =============*/
-/* ==================== Best offer =============*/
+/* Banners block*/
+
+/* Block Best offer*/
 .best-offer{
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
@@ -595,7 +560,9 @@ padding-right: 28.5%;
 .best-offer-right-block-button.tablet-layout{
     display: none;
 }
-/* ==================== SECTION NEW ARRIVALS =============*/
+/*Block Best offer*/
+
+/*Block New Arrivals*/
 .arrivals{
     padding-top: 93px;
 }
@@ -621,9 +588,9 @@ padding-right: 28.5%;
     margin-bottom: 100px;
 }
 
-/* ================= END SECTION NEW ARRIVALS  =============*/
+/*Block New Arrivals*/
 
-/* ================= FOOTER  =============*/
+/*Footer*/
 
 .footer {
     border-top: 1px solid #e5e5e5;
@@ -637,18 +604,15 @@ padding-right: 28.5%;
     padding-top: 2.5%;
     padding-bottom: 8.5%;
 }
-
 .rightFooter {
     padding-top: 2.5%;
     padding-left: 45px;
 }
-
 .rowRightFooter {
     clear: both;
     padding-left: 15px;
     padding-right: 15px;
 }
-
 .rowRightFooter .customMiniHead {
     line-height: 42px;
     margin-bottom: 0;
@@ -657,29 +621,23 @@ padding-right: 28.5%;
 .footerList li a {
     font: 14px/40px 'RobotoRegular';
 }
-
 .footerCustom {
     font: 14px/24px 'RobotoRegular';
 }
-
 .footerCustom a {
     font-family: 'RobotoBold', sans-serif;
 }
-
 .phone:hover {
     color: #000;
 }
-
 .footerQuestions,
 .footerLinks {
     width: 45%;
 }
-
 .footerPhone,
 .footerCare{
     width: 55%;
 }
-
 .footerQuestions .footerCustom:before {
     content: url("../img/social/tw.png");
     margin-right: 10px;
@@ -690,7 +648,6 @@ padding-right: 28.5%;
     padding-left: 15px;
     padding-right: 15px;
 }
-
 .rowSocial {
     padding-left: 15px;
     padding-right: 15px;
@@ -699,21 +656,17 @@ padding-right: 28.5%;
 .rowSocial .legalBlock {
     display: none;
 }
-
 .tw {
     margin-left: 22px;
 }
-
 .footerList {
     margin-top: 15px;
 }
-
 .footerPhone {
     padding-left: 35px;
 }
-/* ================= END FOOTER  =============*/
-/* ================= BOTTOM BAR  =============*/
 
+/*Footer*/
 .bottomBar {
     padding-top: 8px;
 }
@@ -752,11 +705,10 @@ padding-right: 28.5%;
     border-right: 4px solid #f4f4f4;
     border-bottom: 3px solid transparent;
 }
-/* ================= END BOTTOM BAR =============*/
+/* Footer*/
 
 /*Second page*/
 
-/*+++++++++++++  PAGE CATALOG  ++++++++++++++++++*/
 .filter {
     border-bottom: 1px solid #e5e5e5;
     position: relative;
@@ -764,8 +716,6 @@ padding-right: 28.5%;
     margin: 0 auto;
 
 }
-
-
 .filter .selectLabel {
     display: block;
     cursor: pointer;
@@ -773,11 +723,9 @@ padding-right: 28.5%;
     padding-left: 22px;
     position: relative;
 }
-
 .filter .selectItem:first-child .selectLabel {
     padding-left: 0;
 }
-
 .filter select {
     width: 100%;
     position: absolute;
@@ -793,19 +741,16 @@ padding-right: 28.5%;
     -webkit-appearance: none;
     appearance: none!important;
 }
-
 .filter option {
     font: 12px 'OpenSansBold';
     height: 30px;
     cursor: pointer;
     padding-top: 5px;
 }
-
 .filter option:hover{
     background-color: #f7f7f7;
     color:  #f14a58;;
 }
-
 .filter .display {
     display: block;
     border-top: 0;
@@ -813,7 +758,6 @@ padding-right: 28.5%;
     border-right: 1px solid #e5e5e5;
     border-left: 1px solid #e5e5e5;
 }
-
 .filter select:focus {
     outline: none;
 }
@@ -824,7 +768,6 @@ padding-right: 28.5%;
 .filter .filterTablet {
     display: none;
 }
-
 .filter.firstSelected:before,
 .filter.lastSelected:after {
     content: '';
@@ -835,15 +778,12 @@ padding-right: 28.5%;
     top:0;
     z-index: -10;
 }
-
 .filter.lastSelected:after {
     right: 0;
 }
-
 .filter.firstSelected:before {
     left: 0;
 }
-
 .selectItem {
     width: 16.66%;
     position: relative;
@@ -851,59 +791,45 @@ padding-right: 28.5%;
     height: 65px;
     background: #fff;
 }
-
 .selectedItem {
     background: #f7f7f7;
 }
-
 .selectItem:after {
     content: url('../img/catalog/arrowSelect.png');
     position: absolute;
     right: 17px;
     top: 22px;
 }
-
 .selectItem:last-child:after {
     right: 0;
 }
-
-
 .mobileSelects {
     background: #fff;
 }
-
 .mobileSelects .selectItem {
     width: 100%;
 }
-
 .mobileSelects select {
     position: relative;
     height: 40px;
 }
-
 .mobileSelects select option {
     float: left;
     margin-right: 10px;
     display: inline-block;
 }
-
 .mobileSelects select option:hover {
     color: inherit;
 }
-
-
 .products {
     padding-top: 0;
 }
-
 .products .customItalic {
     line-height: 24px;
 }
-
 .products .arrivalItem {
     margin-top: 56px;
 }
-
 .viewCover {
     opacity: 0;
     position: absolute;
@@ -928,18 +854,15 @@ padding-right: 28.5%;
     letter-spacing: 0.66px;
     padding-top: 50%;
 }
-
 .priceWithoutDiscount,
 .discountProduct{
     color: #757575;
 }
-
 .priceWithoutDiscount {
     font: 14px 'RobotoRegular';
     background: url("../img/catalog/red_line.png") no-repeat;
     letter-spacing: 0.42px;
 }
-
 .discountProduct {
     font: 16px/24px 'Times New Roman PS - Italic MT';
 }
@@ -952,17 +875,14 @@ padding-right: 28.5%;
     cursor: default;
     letter-spacing: 0.8px;
 }
-
 .extraOff .customMiniHead {
     font: 24px/34px 'OpenSansBold';
     width: 75%;
     margin: 0 auto;
 }
-
 .extra {
     color: #f14a58;
 }
-
 .offerExtra {
     font: 16px/30px 'Times New Roman PS - Italic MT';
     color: inherit;
@@ -970,30 +890,24 @@ padding-right: 28.5%;
     margin: 15px auto 0;
     letter-spacing: 0;
 }
-
 .wrapperItem {
     position: relative;
 }
-
 .hoverItalicText {
     color: #fff;
     font: 16px/26px 'Times New Roman PS - Italic MT';
 }
-
 .bannersCatalog .rightBannerSmall {
     display: block;
 }
-
 .bannersCatalog .banners {
     border-bottom: 1px solid #e5e5e5;
 }
-
 .bannersCatalog .customBanner,
 .bannersCatalog .leftBanner .customBannerDesc,
 .bannersCatalog .rightBanner .customPrice{
     color: #fff;
 }
-
 .bannersCatalog .rightBanner .overlay,
 .bannersCatalog .rightBannerSmall .overlay{
     position: absolute;
@@ -1003,16 +917,13 @@ padding-right: 28.5%;
     top:inherit;
     text-align: center;
 }
-
 .bannersCatalog .rightBannerSmall .customBanner {
     color: #f14a58;
 }
-
 .leftBanner, .rightBanner {
     padding-left: 0;
     padding-right: 0;
 }
-
 .products .customGoose {
     width: 80%;
 }
@@ -1022,8 +933,9 @@ padding-right: 28.5%;
 .showMore {
     margin-bottom: 11.5%;
 }
+
 /*Third page*/
-/*+++++++++++++++++++Item details page++++++++++++++++++++++++++*/
+
 .backToCatalog {
     font: 16px/55px 'OpenSansBold';
     margin-left: 16px
@@ -1159,7 +1071,7 @@ a.messageAboutChoice {
     text-align: left;
     padding-left: 50px;
 }
-colorOptions. li {
+.colorOptions li {
     margin-right: 62px;
 }
 
@@ -1173,13 +1085,14 @@ colorOptions. li {
 .bannersCatalog .overlay {
     right: 13%;
 }
-.wrap{
+.slider-right-block{
     width: 100%;
     max-width: 50%;
     float: right;
 }
+
 /*Fourth page*/
-/* ++++++++++++++++++SHOP +++++++++++++++++++++++++++*/
+
 .titleShoppingBag {
     font: 26px/60px OpenSansBold;
     margin-left: 30px;
@@ -1189,7 +1102,6 @@ colorOptions. li {
     float: left;
     margin-top: 2%;
 }
-
 .shopImg {
     width: 45%;
     float: left;
@@ -1290,7 +1202,10 @@ colorOptions. li {
 .descProduct.descProduct-tablet{
     display: none;
 }
-/*media-queries for all pages*/
+
+
+/*Media-queries for all 4 pages*/
+
 @media (min-width: 1025px) {
     .arrivalItem {
         margin-right: 73px;
@@ -1590,22 +1505,11 @@ colorOptions. li {
     .totalCost {
         font: 18px 'RobotoBold';
     }
-
-    /*.rightBanner {*/
-    /*    max-width: 33.5%;*/
-    /*    width: 100%;*/
-    /*}*/
-
-    /*.leftBanner {*/
-    /*    max-width: 66.5%;*/
-    /*    !*width: 100%;*!*/
-    /*}*/
-
     .itemProduct {
         margin-top: 30px;
     }
 
-    .row {
+    .slider {
         width: 100%;
         max-width: 100%;
     }
@@ -1632,7 +1536,7 @@ colorOptions. li {
         width: 100%;
         height: 100%;
     }
-    .wrap{
+    .slider-right-block{
         width: 100%;
         max-width: 100%;
         float: right;
@@ -1700,31 +1604,14 @@ colorOptions. li {
     .addToBag{
         margin-bottom: 100px;
     }
+    .bannersCatalog .leftBanner {
+        width: 66.7%;
+    }
+    .bannersCatalog .rightBanner {
+        width: 33.3%;
+    }
 }
     @media (max-width: 768px) {
-        /*.itemProduct{*/
-        /*    margin-top: 30px;*/
-        /*}*/
-        /*.row{*/
-        /*    width: 100%;*/
-        /*    max-width: 768px;*/
-        /*    max-height: 345px;*/
-        /*}*/
-        /*.fullItem{*/
-        /*    width: 75.45%;*/
-        /*    height: 100%;*/
-        /*    max-width: 516px;*/
-        /*    max-height: 345px;*/
-        /*}*/
-        /*.tumbs{*/
-        /*    width: 24.55%;*/
-        /*    height: 100%;*/
-        /*    max-height: 345px;*/
-        /*}*/
-        /*.tumb{*/
-        /*    width: 100%;*/
-        /*    height: 33.3%;*/
-        /*}*/
         .leftBanner .overlay {
             top: 10%;
         }
@@ -1732,21 +1619,6 @@ colorOptions. li {
             top: 7%;
             right: 8%;
         }
-        /*.listOptions li {*/
-        /*    !*display: block;*!*/
-        /*    !*width: 45%;*!*/
-        /*    !*padding: 0;*!*/
-        /*    !*margin-right: 0;*!*/
-        /*    !*margin-top: 20px;*!*/
-        /*}*/
-
-        /*.listOptions li:nth-child(2n+1) {*/
-        /*    float: left;*/
-        /*}*/
-
-        /*.listOptions li:nth-child(2n) {*/
-        /*    float: right;*/
-        /*}*/
         .buyNow {
             padding: 17px 25%;
         }
@@ -1768,21 +1640,13 @@ colorOptions. li {
         .menu li a {
             font: 10.5px/22px 'OpenSansBold', sans-serif;
         }
-        /*.rightBanner {*/
-        /*    max-width: 33.5%;*/
-        /*    width: 100%;*/
-        /*}*/
-        /*.leftBanner {*/
-        /*    max-width: 66.5%;*/
-        /*    width: 100%;*/
-        /*}*/
         .totalTitle {
             font: 13px 'RobotoBold';
         }
         .totalCost {
             font: 13px 'RobotoBold';
         }
-        .row {
+        .slider {
             float: left;
             width:100%;
         }
@@ -1825,6 +1689,12 @@ colorOptions. li {
         }
         .arrivalButton.addToBag{
             margin-bottom: 100px;
+        }
+        .bannersCatalog .rightBanner {
+            display: none;
+        }
+        .bannersCatalog .leftBanner {
+            width: 100%;
         }
     }
     @media (max-width: 700px) {
@@ -1918,6 +1788,11 @@ colorOptions. li {
             margin-left: -20px;
         }
     }
+@media (min-width: 551px) and (max-width: 619px){
+    .listOptions li{
+        margin-right: 14%;
+    }
+}
     @media (max-width: 550px) {
         .rowBuy .customButton {
             padding: 0;
@@ -1936,15 +1811,128 @@ colorOptions. li {
             margin-right: 14%;
         }
     }
+@media (max-width: 550px) {
+    .bag {
+        margin-left: 53%;
+    }
+
+    .totalBlock.col {
+        padding-left: 0;
+    }
+
+    .best-offer-title {
+        margin-top: 53px;
+        font-size: 26px;
+        letter-spacing: 0.78px;
+    }
+
+    .best-offer-description {
+        margin: 28px 0 74px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+
+    .best-offer-left-slider {
+        max-width: 420px;
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    .best-offer-left-slider-wrap-left {
+        width: 96%;
+    }
+    .best-offer-left-slider-wrap-left.extra_class_best-offer_one {
+        position: relative;
+    }
+    .best-offer-left-slider-wrap-left.extra_class_best-offer_one:after {
+        background-image: url("../img/best-offer/best-offer-plus.png");
+        background-size: cover;
+        content: "";
+        position: absolute;
+        width: 14px;
+        height: 15px;
+        top: 38%;
+        right: -6%;
+    }
+    .extra_class_best-offer_one {
+        padding-right: 4%;
+    }
+
+    .extra_class_best-offer_two {
+        padding-left: 4%;
+    }
+
+    .best-offer-left-slider-wrap-right {
+        width: 8%;
+        height: 100%;
+    }
+
+    .best-offer-equal,
+    .best-offer-plus {
+        display: none;
+    }
+    .best-offer-up_row {
+        margin-bottom: 30px;
+    }
+    .best-offer-photo_about {
+        margin-top: 33px;
+        font-size: 12px;
+        letter-spacing: 0.36px;
+    }
+
+    .best-offer-photo_goods_price {
+        font-size: 12px;
+        letter-spacing: 0.36px;
+    }
+
+    .best-offer-right-block {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .best-offer-right-block-discount {
+        margin: 37px 0 0;
+        padding-right: 0;
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 0.54px;
+    }
+
+    .best-offer-right-block-discount:after {
+        content: '';
+        width: 65px;
+        height: 39px;
+    }
+
+    .best-offer-right-block-price {
+        font-size: 26px;
+        letter-spacing: 0.78px;
+        margin-bottom: 34px;
+    }
+
+    .best-offer-right-block-price:before {
+        display: inline-block;
+        margin-right: 3%;
+        background: url("../img/best-offer/best-offer-equal.png") no-repeat;
+        content: "";
+        width: 14px;
+        height: 15px;
+    }
+    .best-offer-right-block-button .customButton {
+        font-size: 20px;
+        padding: 23px 54px;
+    }
+    .customBanner{
+        font-size: 21px;
+    }
+}
     @media (max-width: 480px) {
         .arrivalItem:nth-child(3n+3) {
             margin-right: 8%;
         }
-
         .arrivalItem:nth-child(2n+2) {
             margin-right: 0;
         }
-
         .arrivalItem {
             width: 46%;
         }
@@ -2145,130 +2133,11 @@ colorOptions. li {
         }
 
         .bag {
-            margin-left: 71%;
+            margin-left: 68%;
         }
         .listOptions li{
             margin-right: 5%;
         }
     }
-@media (min-width: 551px) and (max-width: 619px){
-    .listOptions li{
-        margin-right: 14%;
-    }
-}
-    @media (max-width: 550px) {
-        .bag {
-            margin-left: 53%;
-        }
 
-        .totalBlock.col {
-            padding-left: 0;
-        }
-
-        .best-offer-title {
-            margin-top: 53px;
-            font-size: 26px;
-            letter-spacing: 0.78px;
-        }
-
-        .best-offer-description {
-            margin: 28px 0 74px;
-            line-height: 30px;
-            font-size: 14px;
-        }
-
-        .best-offer-left-slider {
-            max-width: 420px;
-            width: 50%;
-            margin-bottom: 0;
-        }
-
-        .best-offer-left-slider-wrap-left {
-            width: 96%;
-        }
-        .best-offer-left-slider-wrap-left.extra_class_best-offer_one {
-            position: relative;
-        }
-        .best-offer-left-slider-wrap-left.extra_class_best-offer_one:after {
-            background-image: url("../img/best-offer/best-offer-plus.png");
-            background-size: cover;
-            content: "";
-            position: absolute;
-            width: 14px;
-            height: 15px;
-            top: 38%;
-            right: -6%;
-        }
-        .extra_class_best-offer_one {
-            padding-right: 4%;
-        }
-
-        .extra_class_best-offer_two {
-            padding-left: 4%;
-        }
-
-        .best-offer-left-slider-wrap-right {
-            width: 8%;
-            height: 100%;
-        }
-
-        .best-offer-equal,
-        .best-offer-plus {
-            display: none;
-        }
-        .best-offer-up_row {
-            margin-bottom: 30px;
-        }
-        .best-offer-photo_about {
-            margin-top: 33px;
-            font-size: 12px;
-            letter-spacing: 0.36px;
-        }
-
-        .best-offer-photo_goods_price {
-            font-size: 12px;
-            letter-spacing: 0.36px;
-        }
-
-        .best-offer-right-block {
-            width: 100%;
-            max-width: 550px;
-        }
-
-        .best-offer-right-block-discount {
-            margin: 37px 0 0;
-            padding-right: 0;
-            text-align: center;
-            font-size: 18px;
-            letter-spacing: 0.54px;
-        }
-
-        .best-offer-right-block-discount:after {
-            content: '';
-            width: 65px;
-            height: 39px;
-        }
-
-        .best-offer-right-block-price {
-            font-size: 26px;
-            letter-spacing: 0.78px;
-            margin-bottom: 34px;
-        }
-
-        .best-offer-right-block-price:before {
-            display: inline-block;
-            margin-right: 3%;
-            background: url("../img/best-offer/best-offer-equal.png") no-repeat;
-            content: "";
-            width: 14px;
-            height: 15px;
-        }
-        .best-offer-right-block-button .customButton {
-            font-size: 20px;
-            padding: 23px 54px;
-        }
-        .customBanner{
-            font-size: 21px;
-        }
-    }
 
