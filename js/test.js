@@ -1,40 +1,36 @@
 'use strict';
-// Common rules for my project
-// File App.js
 
-function App() {
-    this.init();
+// Common rules for my project
+
+function MainObject() {// Create a constructor for our MainObject and launch it
+    this.begin();
 }
 
-document.addEventListener('DOMContentLoaded',function() {
-    new App();
-});
-
-App.prototype.init = function () {
-    this.polyfillClosest();
-    new Search();
-    new Menu();
-    new OfferBanner(document.querySelector('.extraOff'));
-    new Filter(document.querySelector('.formFilter'));
+MainObject.prototype.begin = function () { //Create a prototype for our future object MainObject
+    this.polyfill();
+    new SearchField();
+    new Gamburger();
+    new CatalogBanner(document.querySelector('.extraOff'));
+    new FilterCatalog(document.querySelector('.formFilter'));
     new ProductOptions(document.querySelector('.listOptions'));
-    new Thumbnail(document.querySelector('.tumbs'));
+    new Switcher(document.querySelector('.tumbs'));
     new Bag(document.querySelector('.addToBag'));
     new GoToItem(document.querySelector('.rowArrivals'));
     if (window.localStorage && window.sessionStorage) {
-        this.storage();
+        this.innerStorage();
     }
     new Shop(document.querySelector('.shoppingBag'));
 };
 
-App.prototype.storage = function () {
-    this.localStorageCommonPrice = (localStorage.commonPrice) ? `£ ${localStorage.commonPrice}` : "";
-    this.localStorageCountItems = (localStorage.countItems) ? localStorage.countItems : "";
+MainObject.prototype.innerStorage = function () {
+    this.localStorageCommonPrice = (localStorage.goodsPrice) ? `£ ${localStorage.goodsPrice}` : "";
+    this.localStorageCountItems = (localStorage.goodsCounter) ? localStorage.goodsCounter : "";
 
     document.querySelector('.commonPrice').innerHTML = this.localStorageCommonPrice + '<span class="countItems"> ('+ this.localStorageCountItems +')</span>';
     return [this.localStorageCommonPrice, this.localStorageCountItems];
 };
 
-App.prototype.polyfillClosest = function () {
+MainObject.prototype.polyfill = function () {
     if (!Element.prototype.matches) Element.prototype.matches = Element.prototype.msMatchesSelector;
     if (!Element.prototype.closest) Element.prototype.closest = function (selector) {
         let el = this;
@@ -47,49 +43,53 @@ App.prototype.polyfillClosest = function () {
     };
 };
 
-Search.prototype = Object.create(App.prototype);//Create a prototype for the App object
-Menu.prototype = Object.create(App.prototype);
-OfferBanner.prototype = Object.create(App.prototype);
-Filter.prototype = Object.create(App.prototype);
-ProductOptions.prototype = Object.create(App.prototype);
-Thumbnail.prototype = Object.create(App.prototype);
-Bag.prototype = Object.create(App.prototype);
-GoToItem.prototype = Object.create(App.prototype);
-Shop.prototype = Object.create(App.prototype);
+document.addEventListener('DOMContentLoaded',function() {
+    new MainObject();
+});//Create a main object after creating a function constructor with several prototypes
 
-window.addEventListener('resize', function(event){
-    new OfferBanner(document.querySelector('.extraOff'));
+SearchField.prototype = Object.create(MainObject.prototype);//Create the prototypes for our constructors
+Gamburger.prototype = Object.create(MainObject.prototype);
+CatalogBanner.prototype = Object.create(MainObject.prototype);
+FilterCatalog.prototype = Object.create(MainObject.prototype);
+ProductOptions.prototype = Object.create(MainObject.prototype);
+Switcher.prototype = Object.create(MainObject.prototype);
+Bag.prototype = Object.create(MainObject.prototype);
+GoToItem.prototype = Object.create(MainObject.prototype);
+Shop.prototype = Object.create(MainObject.prototype);
+
+window.addEventListener('resize', function(event){//Invoke this listener when
+    // our size on the second page is change
+    new CatalogBanner(document.querySelector('.extraOff'));
 });
-// File App.js
 
-//main.js
-function Search() {
+
+
+function SearchField() { //Function constructor SearchField
     this.searchButton = document.querySelector('.searchButton');
     this.searchButton.addEventListener('click',this.openSearch.bind(this));
 }
 
-function Menu () {
+function Gamburger () {//Function constructor Gamburger
     this.hamburger = document.querySelector('.mobileMenu');
     this.nav = document.querySelector('.nav');
     this.hamburger.addEventListener('click', this.openMenu.bind(this));
 }
 
-
-Search.prototype.openSearch = function () {
+SearchField.prototype.openSearch = function () {
     document.querySelector('.search').classList.toggle('openSearch');
     document.querySelector('.searchForm').classList.toggle('display');
 };
 
-Menu.prototype.openMenu = function (e) {
+Gamburger.prototype.openMenu = function (e) {
     e.preventDefault();
 
     document.querySelector('.header').classList.toggle('openMenu');
     this.nav.classList.toggle('display');
 };
-//main.js
+// Common rules for my project
 
-//Catalog js
-function Filter (filter) {
+//Catalog js second page
+function FilterCatalog (filter) {//Main constructor for our filter on the catalog.page
 
     if (!filter) return;
 
@@ -109,7 +109,7 @@ function Filter (filter) {
 }
 
 
-function OfferBanner (offer) {
+function CatalogBanner (offer) {
     if (!offer) return;
 
     this.offer = offer;
@@ -117,20 +117,17 @@ function OfferBanner (offer) {
     this.itemImg.style.cssText= 'margin-bottom:' + (this.offer.clientHeight + this.offer.clientHeight/4) + 'px;';
 }
 
-
 function GoToItem (items) {
     if (!items) return;
-
     this.items = items;
     this.items.addEventListener('click', this.goToDetailItem.bind(this));
 }
 
-
-Filter.prototype.openFilter = function () {
+FilterCatalog.prototype.openFilter = function () {
     this.desktopSelects.classList.toggle('mobileSelects');
 };
 
-document.onmouseover = function(event) {
+document.addEventListener('mouseover', function(event) {
     let container = document.querySelector(".desktopSelects");
     if (!container) return;
 
@@ -140,9 +137,9 @@ document.onmouseover = function(event) {
             items[i].classList.remove("display");
         }
     }
-};
+});
 
-Filter.prototype.openSelect = function (e) {
+FilterCatalog.prototype.openSelect = function (e) {
     let target = e && e.target || e.srcElement;
 
     if (target.parentNode.getAttribute('class') != 'selectLabel') return;
@@ -160,7 +157,7 @@ Filter.prototype.openSelect = function (e) {
     target.querySelector('select').setAttribute('size', optionLength);
 };
 
-Filter.prototype.desktopToggle = function () {
+FilterCatalog.prototype.desktopToggle = function () {
     this.desktopSelects.addEventListener('mouseover', this.openSelect.bind(this));
 
     for (let i = 0; i < this.options.length; i++) {
@@ -168,7 +165,7 @@ Filter.prototype.desktopToggle = function () {
     }
 };
 
-Filter.prototype.closeSelect = function (e) {
+FilterCatalog.prototype.closeSelect = function (e) {
     let target = e && e.target || e.srcElement;
 
     this.valueFilter = target.closest('.selectItem').querySelector('.valueFilter');
@@ -184,7 +181,7 @@ Filter.prototype.closeSelect = function (e) {
 
 };
 
-Filter.prototype.filterStyles = function (method, value, option) {
+FilterCatalog.prototype.filterStyles = function (method, value, option) {
     let firstItem = document.querySelector('.desktopSelects').firstElementChild;
     let lastItem = document.querySelector('.desktopSelects').lastElementChild;
 
@@ -202,7 +199,7 @@ Filter.prototype.filterStyles = function (method, value, option) {
 
 };
 
-Filter.prototype.mobileSelectedOptions = function () {
+FilterCatalog.prototype.mobileSelectedOptions = function () {
     this.filterTablet = document.querySelector('.filterTablet');
 
     for (let j = 0; j < this.selectItems.length; j++) {
@@ -222,9 +219,9 @@ GoToItem.prototype.goToDetailItem = function (e) {
     document.location.href = 'item' + item + '.html';
     return item;
 };
-//Catalog.js
+//Catalog.js second page
 
-// item details js
+// item-details-page.js third page
 function Bag (button) {
     if (!button) return;
 
@@ -233,7 +230,7 @@ function Bag (button) {
     this.buttonAdd.addEventListener('click', this.addGoose.bind(this));
 }
 
-function Thumbnail(thumbnail) {
+function Switcher(thumbnail) {
     if (!thumbnail) return;
 
     this.thumbnailBlock = thumbnail;
@@ -249,7 +246,7 @@ function ProductOptions (list) {
 }
 
 
-Thumbnail.prototype.doFullImg = function (e) {
+Switcher.prototype.doFullImg = function (e) {
     let target = e && e.target || e.srcElement;
 
     if (!target.parentNode.querySelector('img')) return;
@@ -299,11 +296,11 @@ Bag.prototype.addGoose = function (e) {
             price += +(this.cart[key].price.split('£')[1]*this.cart[key].qw);
         }
 
-        localStorage.countItems = quantityOfGooses;
-        localStorage.commonPrice = price.toFixed(2);
+        localStorage.goodsCounter = quantityOfGooses;
+        localStorage.goodsPrice = price.toFixed(2);
 
         document.querySelector('.commonPrice').innerHTML =
-            `£ ${localStorage.commonPrice}<span class="countItems"> (${localStorage.countItems})</span>`;
+            `£ ${localStorage.goodsPrice}<span class="countItems"> (${localStorage.goodsCounter})</span>`;
         document.querySelector('.addedGoose').classList.add('display');
     } else {
         document.querySelector('.chooseOptions').classList.add('display');
@@ -336,15 +333,13 @@ Bag.prototype.addCart = function (e) {
         };
     }
 
-    let obj = JSON.stringify(this.cart);
-    localStorage.cart = obj;
+    localStorage.cart = JSON.stringify(this.cart);
 };
-// item details js
+//item-details-page.js third page
 
-//shop js
+//shopping-bag.js fourth page
 function Shop (shop) {
     if (!shop) return;
-
     this.shop = shop;
     this.buttonBuy = document.querySelector('.buyNow');
     this.totalCost = document.querySelector('.totalCost');
@@ -420,10 +415,10 @@ Shop.prototype.removeItem = function (e) {
         price += +this.cart[key].price.split('£')[1]*this.cart[key].qw;
     }
 
-    localStorage.countItems = quantityOfGooses;
-    localStorage.commonPrice = price;
+    localStorage.goodsCounter = quantityOfGooses;
+    localStorage.goodsPrice = price;
 
-    document.querySelector('.commonPrice').innerHTML = `£ ${localStorage.commonPrice} <span class="countItems"> (${localStorage.countItems})</span>`;
+    document.querySelector('.commonPrice').innerHTML = `£ ${localStorage.goodsPrice} <span class="countItems"> (${localStorage.goodsCounter})</span>`;
 
     this.checkEmpty();
     this.totalSum();
@@ -452,6 +447,6 @@ Shop.prototype.checkEmpty = function () {
     }
 };
 Shop.prototype.totalSum = function () {
-    this.totalCost.innerHTML = localStorage.commonPrice ? ('£ ' + localStorage.commonPrice) : '£ 0';
+    this.totalCost.innerHTML = localStorage.goodsPrice ? ('£ ' + localStorage.goodsPrice) : '£ 0';
 };
-//shop js
+////shopping-bag.js fourth page
