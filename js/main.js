@@ -1,4 +1,5 @@
 'use strict';
+// Common rules for my project
 // File App.js
 function App() {
     this.init();
@@ -45,8 +46,7 @@ App.prototype.polyfillClosest = function () {
     };
 };
 
-Search.prototype = Object.create(App.prototype);//Create an prototype for an object Search
-//  (for tag input) which located in the header
+Search.prototype = Object.create(App.prototype);//Create a prototype for the App object
 Menu.prototype = Object.create(App.prototype);
 OfferBanner.prototype = Object.create(App.prototype);
 Filter.prototype = Object.create(App.prototype);
@@ -64,8 +64,7 @@ window.addEventListener('resize', function(event){
 //main.js
 function Search() {
     this.searchButton = document.querySelector('.searchButton');
-    this.searchButton.addEventListener('click',this.openSearch.bind(this)
-    );
+    this.searchButton.addEventListener('click',this.openSearch.bind(this));
 }
 
 function Menu () {
@@ -180,7 +179,6 @@ Filter.prototype.closeSelect = function (e) {
     let optionVal = (currentTarget.value === 'notSelected') ?
         this.filterStyles('remove', '', currentTarget) :
         this.filterStyles('add', target.innerText, currentTarget);
-
     return optionVal;
 
 };
@@ -372,7 +370,12 @@ function Shop (shop) {
 Shop.prototype.createItem = function (item, key) {
     return (`<div class="shoppingBlock clearfix" data-block="${key}">
                 <div class="shopImg">
-                    <img src="${item.img}" alt="">
+                    <div class="shopImg-wrapper-photo">
+                    <img src="${item.img}" alt="photo-product">
+                    <div class="viewCover">
+                        <p class="quickView">Edit item</p>
+                    </div>
+                    </div>
                     <p class="priceBag">${item.price}</p>
                 </div>
                 <div class="shopOptions">
@@ -408,8 +411,7 @@ Shop.prototype.removeItem = function (e) {
     item.parentNode.removeChild(item);
     delete this.cart[data];
 
-    let object = JSON.stringify(this.cart);
-    localStorage.cart = object;
+    localStorage.cart = JSON.stringify(this.cart);
 
     this.cart =  (localStorage.cart) ? JSON.parse(localStorage.cart) : {};
     for (let key in this.cart) {

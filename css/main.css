@@ -1202,8 +1202,13 @@ a.messageAboutChoice {
 .descProduct.descProduct-tablet{
     display: none;
 }
-
-
+.shopImg-wrapper-photo{
+    position: relative;
+}
+.shopImg-wrapper-photo .quickView{
+    padding-top: 20%;
+    padding-left: 25%;
+}
 /*Media-queries for all 4 pages*/
 
 @media (min-width: 1025px) {
